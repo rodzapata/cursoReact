@@ -1,78 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso de React JS</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
 
-  <body>
-    <h1>Curso de React JS</h1>
-    <h2>Indice Tematico</h2>
-    <ul>
-      <li><a href="cursoReact.html#referencia">Referencias</a></li>
-      <li><a href="cursoReact.html#instalacion">Instalacion iniciales</a></li>
-      <li><a href="cursoReact.html#react+vite">React + Vite primer proyecto</a></li>
-    </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de React JS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <a href="cursoReact.html">⏫</a>
-    <hr />
-    <h2 id="referencia">Referencias</h2>
-    <article>
-      para la realizacion de este curso tomamos como base el curso de
-      <a href="https://www.youtube.com/watch?v=ladwC6Lrs-M"
-        >React de SergiCode
-      </a>
-      esta pagina es importantes para seguir paso a paso el curso :
-      <a
-        href="https://www.youtube.com/watch?v=tmRa0_EvMoc&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=4"
-        >Curso de JavaScript por Jonathan Mircha</a
-      >
-      <br />
-      Extensiones recomendadas que se deben instalar en visual code, para
-      trabajar con JavaScript: ESLint nos da utocompletado y nos guia con
-      mensajes de error desde la consola, Ptettier para formatear documento
-    </article>
+<body>
+  <h1>Curso de React JS</h1>
+  <h2>Indice Tematico</h2>
+  <ul>
+    <li><a href="cursoReact.html#referencia">Referencias</a></li>
+    <li><a href="cursoReact.html#instalacion">Instalacion iniciales</a></li>
+    <li><a href="cursoReact.html#react+vite">React + Vite primer proyecto</a></li>
+    <li><a href="cursoReact.html#primerComponente">Primer Componente</a></li>
+    <li><a href="cursoReact.html#variables">Variables</a></li>
+    <li><a href="cursoReact.html#fragmentos">Fragmentos</a></li>
+  </ul>
 
-    <a href="cursoReact.html">⏫</a>
-    <hr />
-    <h2 id="Instalacion">Instalacion Inicial</h2>
-    <article>
-      podemos encotra la lista de lo que debemos instalar en el repositorio
-       <a href="https://gist.github.com/sergiecode">sergicode</a>
-      para trabajar con React JS, primero hay que instalr
-      <strong>node.js</strong>, tambien hay que instalar <strong>vite</strong>,
-      ademas de unos Snippets en visual Studio Code que son:
-      vsc React Simple React Snippets <a href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets">link de descarga</a>
-      vsc React ES7+ React/Redux/React-Native snippets<a href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets">Segundo link de descarga</a>
-    </article>
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="referencia">Referencias</h2>
+  <article>
+    para la realizacion de este curso tomamos como base el curso de
+    <a href="https://www.youtube.com/watch?v=ladwC6Lrs-M">React de SergiCode
+    </a>
+    esta pagina es importantes para seguir paso a paso el curso :
+    <a href="https://www.youtube.com/watch?v=tmRa0_EvMoc&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=4">Curso de
+      JavaScript por Jonathan Mircha</a>
+    <br />
+    Extensiones recomendadas que se deben instalar en visual code, para
+    trabajar con JavaScript: ESLint nos da utocompletado y nos guia con
+    mensajes de error desde la consola, Ptettier para formatear documento
+  </article>
 
-    <a href="cursoReact.html">⏫</a>
-    <hr />
-    <h2 id="react+vite">React+vite primer proyecto</h2>
-    <article>
-      gracias a <strong>vite</strong> que nos permite generar la estructura de un proyecto para react, donde
-      podemos escoger la tecnologia a utilizar ya sea JavaScript, TypeScritp, Svelte
-      en esta pagina podemos encontrar la documentacion oficial en español: 
-      <a href="https://es.vitejs.dev/guide/">Guia de vite</a>
-      <pre>
-        para iniciar nuetro primer proyecto debemos ejecutar el siguiente codigo desde la consola de 
-        comando del windows o PowerShell de windows, tambien me funcionó utilizando Git.
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="Instalacion">Instalacion Inicial</h2>
+  <article>
+    podemos encotra la lista de lo que debemos instalar en el repositorio
+    <a href="https://gist.github.com/sergiecode">sergicode</a>
+    para trabajar con React JS, primero hay que instalr
+    <strong>node.js</strong>, tambien hay que instalar <strong>vite</strong>,
+    ademas de unos Snippets en visual Studio Code que son:
+    vsc React Simple React Snippets <a
+      href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets">link de descarga</a>
+    vsc React ES7+ React/Redux/React-Native snippets<a
+      href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets">Segundo link de
+      descarga</a>
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="react+vite">React+vite primer proyecto</h2>
+  <article>
+    gracias a <strong>vite</strong> que nos permite generar la estructura de un proyecto para react, donde
+    podemos escoger la tecnologia a utilizar ya sea JavaScript, TypeScritp, Svelte
+    en esta pagina podemos encontrar la documentacion oficial en español:
+    <a href="https://es.vitejs.dev/guide/">Guia de vite</a>
+    para iniciar nuetro primer proyecto debemos ejecutar el siguiente codigo desde la consola de
+    comando del windows o PowerShell de windows, tambien me funcionó utilizando Git.
+    <pre>
         <code>
           npm create vite@latest
         </code>
-        Despues no pide el nombre del proyecto yo le coloque primer-proyecto, y la tecnologia seria:
-        react despues hay un submenu donde escogi <strong>Javascript + Swc</strong>
-        Para poder ejecutar el
-        <code>
-          cd primer-proyecto
-          npm install
-          npm run dev
-        </code>
+    </pre>
 
-     </pre>
-    </article>
-  </body>
+    Despues no pide el nombre del proyecto yo le coloque primer-proyecto, y la tecnologia seria:
+    <strong>React</strong> despues hay un submenu donde escogi <strong>Javascript + Swc</strong>
+    Para poder ejecutar el codigo
+    <pre>
+          <code>
+            cd primer-proyecto
+            npm install
+            npm run dev
+          </code>
+    </pre>
+
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="primerComponente">Primer Componente</h2>
+  <article>
+    Un componente es un fragmento de codigo que contiene su parte grafica, y es un pedazo dentro de una aplicacion.
+    para utilizarlo hay que tener instalado los Snippets de visual estudio, por ejemplo para crear un funcion componente
+    se escribe <strong>ffc</strong>
+    <pre>
+        <code>
+          function PrimerComponente() {
+            return ( &lt;h1>Hola mundo&lt;/h1> );
+          }
+        
+          export default PrimerComponente;
+
+        </code>
+      </pre>
+
+    para llamar a nuestro PrimerComponente tenemos que importarlo desde nuestro archivo <strong>main.jsx</strong>,
+    quedando de la siguiente forma:
+    <pre>
+      <code>
+        import React from 'react'
+        import ReactDOM from 'react-dom/client'
+        import ComponentePrueba from './ComponentePrueba'
+
+        ReactDOM.createRoot(document.getElementById('root')).render(
+          &lt;React.StrictMode>
+            &lt;ComponentePrueba />
+          &lt;/React.StrictMode>,
+        )
+      </code>
+    </pre>
+
+    con el atajo de teclado alt + Shift + F (Formatea el docuemento) en visual studio Code. <br>
+    La forma recomendada en la actualidad es usar el Snippets <strong>rafc</strong> que crea una funcion flecha
+    <pre>
+      <code>
+        import React from 'react'
+
+        export const Componente2 = () => {
+          return (
+            &lt;div>Componente2&lt;/div>
+          )
+        }
+      </code>
+    </pre>
+    Pero cambia la forma de llamardo ahora en el momento de importarlo hay que colocar entre llaves <strong>{ }</strong>
+    quedando el codigo de la siguiente forma:
+    <pre>
+      <code>
+        import { Componente2 } from './Componente2'
+      </code>
+    </pre>
+
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="variables">Variables</h2>
+  <article>
+    <strong>Nota: </strong> Los nombres de los componente debe esta con mayuscula inicial o sale error al momento de
+    importarlo, ademas es una
+    convencion de buenas practicas.
+    para pasar los variables desde un componente al <strong>main.jsx</strong> para que lo renderise React, hay que
+    escribir la variables
+    entre llaves <strong>{ }</strong>, quedando de la siguiente forma:
+    <pre>
+      <code>
+        const wordSerntence='frase de prueba'
+        const numero=145678
+        const tecnologias=['React','Spring boot','node']
+        const verdadero=true
+        const funcionFlecha=()=>1+1
+        const objeto={nombre:'Curso de javascrip',duracion:4}
+        const fecha=new Date();
+  
+  
+        export const Variables=()=>{
+          return (
+            &lt;h1>{wordSerntence}&lt;/h1>
+          )
+        }
+      </code>
+    </pre>
+    los campos primitivos como string, numeros, boleanos y array se pasan sin ningun problemas, las funciones deben
+    colocar los parentesis para que se ejecute,
+    ejemplo:
+    <pre>
+      <code>
+        const funcionFlecha=()=>1+1
+ 
+  
+        export const Variables=()=>{
+          return (
+            &lt;h1>{funcionFlecha()}&lt;/h1>
+          )
+        }
+      </code>
+    </pre>
+    En cuanto a los objetos , los objeto tipo fecha y los JSON sale error para poder enviarlos hay que converirlos
+    primeros a string usando <strong>stringify</strong>
+    ejemplo:
+    <pre>
+      <code>
+        const objeto={nombre:'Curso de javascrip',duracion:4}
+        const fecha=new Date();
+
+        export const Variables=()=>{
+          return (
+            &lt;h1>{JSON.stringify(objeto)}&lt;/h1>
+          )
+        }
+      
+      </code>
+    </pre>
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="fragmentos">Fragmentos</h2>
+  <article>
+    Si notamos en los ejemplos anteriores en caso que queremos devolver varias variables tendriamos un error, porque
+    para poder enviarlo hay que enviarlo envuelto desde un padre, envolviendo dentro de un <strong>Div</strong>,
+    quedando el codigo de la siguiente forma:
+    <pre>
+      <code>
+        const wordSerntence='frase de prueba'
+        const numero=145678
+        const tecnologias=['React','Spring boot','node']
+        const verdadero=true
+        const funcionFlecha=()=>1+1
+        const objeto={nombre:'Curso de javascrip',duracion:4}
+        const fecha=new Date();
+
+        export const Fragmento=()=>{
+          return (
+              &lt;div>
+                &lt;h1>Las variables de JSX son:&lt;/h1>
+                &lt;h4>Variables tipo String&lt;/h4>&lt;p>{wordSerntence}&lt;/p>
+                &lt;h4>Variables tipo numerico&lt;/h4>&lt;p>{numero}&lt;/p>
+                &lt;h4>Variables tipo Array&lt;/h4>&lt;p>{tecnologias}&lt;/p>
+                &lt;h4>Variables tipo boleano&lt;/h4>&lt;p>{verdadero}&lt;/p>
+                &lt;h4>Variables tipo funcion&lt;/h4>&lt;p>{JSON.stringify(funcionFlecha())}&lt;/p>
+                &lt;h4>Variables tipo objeto&lt;/h4>&lt;p>{JSON.stringify(objeto)}&lt;/p>
+              &lt;/div>
+          )
+        }
+
+      </code>
+    </pre>
+    Esa era la forma antigua en que se hacia por eso es que aparecieron los <strong>Fragment</strong> quedanto de la siguiente forma:
+    <pre>
+      <code>
+        const wordSerntence='frase de prueba'
+        const numero=145678
+        const tecnologias=['React','Spring boot','node']
+        const verdadero=true
+        const funcionFlecha=()=>1+1
+        const objeto={nombre:'Curso de javascrip',duracion:4}
+        const fecha=new Date();
+
+        export const Fragmento=()=>{
+          return (
+              &lt;Fragment>
+                &lt;h1>Las variables de JSX son:&lt;/h1>
+                &lt;h4>Variables tipo String&lt;/h4>&lt;p>{wordSerntence}&lt;/p>
+                &lt;h4>Variables tipo numerico&lt;/h4>&lt;p>{numero}&lt;/p>
+                &lt;h4>Variables tipo Array&lt;/h4>&lt;p>{tecnologias}&lt;/p>
+                &lt;h4>Variables tipo boleano&lt;/h4>&lt;p>{verdadero}&lt;/p>
+                &lt;h4>Variables tipo funcion&lt;/h4>&lt;p>{JSON.stringify(funcionFlecha())}&lt;/p>
+                &lt;h4>Variables tipo objeto&lt;/h4>&lt;p>{JSON.stringify(objeto)}&lt;/p>
+              &lt;/Fragment>
+          )
+        }
+
+      </code>
+    </pre>
+    Tambien se puede cambiar la etiqueta <strong>Fragment</strong> por simplemento <strong>&lt; &gt;</strong>
+  </article>
+
+</body>
+
 </html>

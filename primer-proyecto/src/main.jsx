@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import ComponentePrueba from './ComponentePrueba'
+import { Componente2 } from './Componente2'
+import { Variables } from './Variables'
+import {Fragmento} from './Fragmento'
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ComponentePrueba />
+    <Componente2 />
+    <Variables />
+    <Fragmento />
+  </React.StrictMode>,
 )
