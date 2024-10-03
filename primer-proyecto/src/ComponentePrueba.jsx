@@ -1,3 +1,5 @@
+import './ComponentePrueba.css'
+
 function ComponentePrueba() {
     return (<h1>Prueba de titulo</h1>  );
 }
