@@ -23,6 +23,7 @@
     <li><a href="cursoReact.html#hooks">Hooks</a></li>
     <li><a href="cursoReact.html#estilos">estilos</a></li>
     <li><a href="cursoReact.html#props">props propiedades</a></li>
+    <li><a href="cursoReact.html#eventos">eventos</a></li>
   </ul>
 
   <a href="cursoReact.html">⏫</a>
@@ -320,6 +321,23 @@
   <hr />
   <h2 id="estilos">estilos style</h2>
   <article>
+    para agregar un estilo a un componente debemos llamarlo de la siguinte forma dentro del <strong>main.jsx</strong> agregamo un import: <br>
+    <pre>
+      <code>
+        import './style.css' 
+      </code>
+    </pre>
+    y en el style.css ponemos por ejemplo: <br>
+    <pre>
+      <code>
+        body, html{
+          background-color: antiquewhite;
+          color: chocolate;
+        }
+      </code>
+    </pre>
+
+
     Las funciones que comienzan con <strong>use</strong> se llaman <strong>Hooks</strong>. useState es un Hook nativo dentro de React. <br>
 
   </article>
@@ -328,10 +346,111 @@
   <hr />
   <h2 id="props">props  propiedades</h2>
   <article>
-    Las funciones que comienzan con <strong>use</strong> se llaman <strong>Hooks</strong>. useState es un Hook nativo dentro de React. <br>
+    se utlizan para pasar informacion de un componente padre a un componente hijo. <br>
+    vamos a crear un componente llamado <strong>PrimerComponente.jsx</strong>, tenemos que utilizar el snippets <strong>rafc</strong> <br>
+    y nos genera el siguiente codigo: <br>
+    <pre>
+      <code>
+        import React from 'react'
+
+        export const PrimerComponente = () => {
+          return (
+            &lt;div>PrimerComponente&lt;/div>
+          )
+        }
+
+      </code>
+    </pre>
+    dentro de los parentices se pasa los <strong>props</strong> y desde el main.jsx se eviand el objeto con los atributos titulos y subtitulos 
+    de la siguiente forma: <br>
+    <pre>
+      import React from 'react'
+      import ReactDOM from 'react-dom/client'
+      import './style.css' 
+      import { PrimerComponente } from './PrimerComponente'
+
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        &lt;React.StrictMode>
+          &lt;PrimerComponente titulo="Este es un titulo" subtitulo="subtitulo de prueba"/>
+          &lt;/React.StrictMode>,
+      )
+
+    </pre>
+    al componente le quitmos al reurno los <strong>Div</strong> y dejamos simplemente los <strong>&lt;  &gt;</strong> quedando de la siguiente forma: <br>
+    <pre>
+      <code>
+        import React from 'react'
+
+        export const PrimerComponente = (props) =&gt; {
+        return (
+          &lt;>
+            &lt;h1>props:&lt;/h1>
+          &lt;/>
+          )
+        }
+
+      </code>
+    </pre>
+    ahora lo siguiente hay que <strong>desestructurar</strong> quitando la palabra <strong>prop</strong> y colocamos cada uno de los atributos entre llaves <strong>{ }</strong> <br>
+    <pre>
+      <code>
+        import React from 'react'
+
+        export const PrimerComponente = ({titulo, subtitulo}) =&gt; {
+        return (
+          &lt;>
+            &lt;h1>El titulo es:{titulo} &lt;/h1>
+            &lt;h1>El subtitulo es :{subtitulo} &lt;/h1>
+          &lt;/>
+          )
+        }
+      </code>
+    </pre>
+    en caso que el segundo parametro sea un numero, por decir algo un contador y dentro del componente hay que incrementarle uno, entonces hay
+    que especificar que sea numerico y en caso de pasarle un caracter hay que restringirlo, de la siguiente forma: <br>
+    en el main.jsx hay que quitar las comillas al pasar el subtitulos y colocarlos entre llaves <strong>{ }</strong>
+
+    <pre>
+      import React from 'react'
+      import ReactDOM from 'react-dom/client'
+      import './style.css' 
+      import { PrimerComponente } from './PrimerComponente'
+
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        &lt;React.StrictMode>
+          &lt;PrimerComponente titulo="Este es un titulo" subtitulo={10}/>
+          &lt;/React.StrictMode>,
+      )
+
+    </pre>
+    y el componente que lo recibe quedaria el codigo así : <br>
+
+    <pre>
+      <code>
+        import React from 'react'
+
+        export const PrimerComponente = ({titulo, subtitulo}) =&gt; {
+        return (
+          &lt;>
+            &lt;h1>El titulo es:{titulo} &lt;/h1>
+            &lt;h1>El subtitulo es :{subtitulo+1} &lt;/h1>
+          &lt;/>
+          )
+        }
+      </code>
+    </pre>
+
+    ahora para retringir que solo acepte numeros hay dos maneras de hacerlo y tambien podemos trabajar con valores por defecto de la siguiente forma: <br>
+
 
   </article>
-
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="ventos">Eventos</h2>
+  <article>
+    Los eventos son los encargado de realizar una deteminada accion cuando son invocados a travez un clikc o el mouse o el teclado. <br>
+    
+  </article>
 </body>
 
 </html>
