@@ -9,7 +9,7 @@ import { PrimerComponente } from './PrimerComponente'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <PrimerComponente titulo="Curso de React" subtitulo={10} /> */}
-    <PrimerComponente  />
+    <PrimerComponente titulo="Curso de React" subtitulo={10} />
+    {/* <PrimerComponente  /> */}
   </React.StrictMode>,
 )
