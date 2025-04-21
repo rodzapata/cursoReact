@@ -1,44 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de React JS</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de React JS</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <body>
+    <h1>Curso de React JS</h1>
+    <h2>Indice Tematico</h2>
+    <ul>
+      +
+      <li><a href="cursoReact.html#referencia">Referencias</a></li>
+      <li><a href="cursoReact.html#instalacion">Instalacion iniciales</a></li>
+      <li><a href="cursoReact.html#IIS">Havilitar IIS en Windows</a></li>
+      <li>
+        <a href="cursoReact.html#react+vite">React + Vite primer proyecto</a>
+      </li>
+      <li><a href="cursoReact.html#primerComponente">Primer Componente</a></li>
+      <li><a href="cursoReact.html#snippets">Snippets</a></li>
+      <li><a href="cursoReact.html#variables">Variables</a></li>
+      <li><a href="cursoReact.html#fragmentos">Fragmentos</a></li>
+      <li><a href="cursoReact.html#hooks">Hooks</a></li>
+      <li><a href="cursoReact.html#estilos">estilos</a></li>
+      <li><a href="cursoReact.html#props">props propiedades</a></li>
+      <li><a href="cursoReact.html#eventos">eventos</a></li>
+    </ul>
 
-<body>
-  <h1>Curso de React JS</h1>
-  <h2>Indice Tematico</h2>
-  <ul>
-    <li><a href="cursoReact.html#referencia">Referencias</a></li>
-    <li><a href="cursoReact.html#instalacion">Instalacion iniciales</a></li>
-    <li><a href="cursoReact.html#react+vite">React + Vite primer proyecto</a></li>
-    <li><a href="cursoReact.html#primerComponente">Primer Componente</a></li>
-    <li><a href="cursoReact.html#snippets">Snippets</a></li>
-    <li><a href="cursoReact.html#variables">Variables</a></li>
-    <li><a href="cursoReact.html#fragmentos">Fragmentos</a></li>
-    <li><a href="cursoReact.html#hooks">Hooks</a></li>
-    <li><a href="cursoReact.html#estilos">estilos</a></li>
-    <li><a href="cursoReact.html#props">props propiedades</a></li>
-    <li><a href="cursoReact.html#eventos">eventos</a></li>
-  </ul>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="referencia">Referencias</h2>
+    <article>
+      En esta pagina podemos encontra la documentacion de React en españo
+      <a href="https://es.react.dev/learn" target="_blank">aprende React</a>,
+      para la realizacion de este curso tomamos como base el curso de
+      <a href="https://www.youtube.com/watch?v=ladwC6Lrs-M" target="_blank"
+        >React de SergiCode
+      </a>
+      Existe una pagina que convierte codigo <strong>HTML</strong> a codigo
+      <strong>JSX</strong> que es el utilizado en React para devolver un mckup
+      <a href="https://transform.tools/html-to-jsx" target="_blank"
+        >Transformar html a Jsx</a
+      >. La documentacion oficial de React era
+      <a href="https://es.legacy.reactjs.org/" target="_blank"
+        >Anterior habla de todos los eventos</a
+      >
+      y la nueva documentacion actulizada solo habla de
+      <strong>onclick</strong> y es
+      <a href="https://es.react.dev/learn" target="_blank"
+        >Pagina oficial para aprender actualizada</a
+      >
+      <br />
+      curso completo de rect 2024 por Midulive
+      <a
+        href="https://www.youtube.com/watch?v=7iobxzd_2wY&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29"
+        target="_blank"
+        >Curso 2024 by midulive
+      </a>
+      <br />
+      en la entrevistas de trabajo es muy utilizado la pagina
+      <a href="https://codi.link/%7C%7C" target="_blank">Codi.link</a> que es un
+      editor en linea. <br />
+    </article>
 
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="referencia">Referencias</h2>
-  <article>
-    En esta pagina podemos encontra la documentacion de React en españo <a href="https://es.react.dev/learn">aprende
-      React</a>,
-    para la realizacion de este curso tomamos como base el curso de
-    <a href="https://www.youtube.com/watch?v=ladwC6Lrs-M">React de SergiCode
-    </a>
-    Existe una pagina que convierte codigo <strong>HTML</strong> a codigo <strong>JSX</strong> que es el utilizado en
-    React para
-    devolver un mckup <a href="https://transform.tools/html-to-jsx">Transformar html a Jsx</a>.
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="Instalacion">Instalacion Inicial</h2>
+    <article>
+      podemos encotra la lista de lo que debemos instalar en el repositorio
+      <a href="https://gist.github.com/sergiecode" target="_blank">sergicode</a>
+      para trabajar con React JS, primero hay que instalr
+      <strong>node.js</strong>, tambien hay que instalar <strong>vite</strong>,
+      ademas de unos Snippets en visual Studio Code que son: vsc React Simple
+      React Snippets
+      <a
+        href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets"
+        target="_blank"
+        >link de descarga</a
+      >
+      vsc React ES7+ React/Redux/React-Native snippets<a
+        href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
+        target="_blank"
+        >Segundo link de descarga</a
+      >
+      <br />
+      Para Manejar colores y tipos de iconos se instala la extension
+      Material-icons. <br /><br />
+      si quieres que el programador sepa que tipo de datos es el que se entá
+      pasando en una <strong>Prop</strong> , hay que instalar: <br />
+      npm i prop-types <br />
+      Para que el visual code te ayude con colores para identificar la apertura
+      y el cierre de los parentices y llaves se usaba:
+      <strong>Breacket Pair colorizer 2</strong> pero esta ya se usa de manera
+      nativa en visual studio code, si no te muestra los colores realizar los
+      siguientes pasos: <br />
+      Abre la configuración de VS Code (Ctrl + , o Cmd + ,). en la lupa de
+      busqueda escribes <strong>Brack</strong> , luego activas Brack Par
+      colorizer. Editor Guide: lo colocas en true.
+    </article>
 
+<<<<<<< HEAD
     La documentacion oficial de React era <a href="https://es.legacy.reactjs.org/">Anterior habla de todos los
       eventos</a> y la nueva
     documentacion actulizada solo habla de <strong>onclick</strong> y es <a href="https://es.react.dev/learn">Pagina
@@ -47,69 +110,76 @@
     en la entrevistas de trabajo es muy utilizado la pagina <a href="https://codi.link/%7C%7C">Codi.link</a> que es un editor en linea. <br><br>
     blog de React elaborada por Jonathan Mircha <a href="https://jonmircha.com/react"> Curso de react</a> <br>
     
+=======
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="IIS">IIS Intenet Information Service</h2>
+    <article>
+      Podemos habiliar el IIS para nuesto sitio web de manera local sin
+      necesidad de instalar PHP. <br />
+      dende window en la lupa escribimos
+      <strong>Activar y desactivar caracteristicas de windows</strong> <br />
+      o puede presionar <strong>Crl + R</strong> y escribe la palabra
+      <strong>optionalfeatures</strong> Enter<br />
+      para probar si quedo bien instalado simplemente se habre el navegador y se
+      escribe en la url <br />
+      http://localhost/ <br />
+      ahora tenemos que apuntar nuestro sitio web a la carpeta que vamos a
+      trabajar. <br />
+      nuevamente nos vamos a la lupa de windows y escribimos
+      <strong>II</strong> <br />
+      nos vamos a la carpeta C:\inetpub\wwwroot y creamos una subcarpeta llamada
+      <strong>introJS</strong> <br />
+      con nuestra aplicacion de React, con hacer esto ya se debe reflejar en IIS
+      nuestro directorio virtual
+      <br />
+      <img src="/img/sitio_web.png" alt="Sitio web local" />
+    </article>
+>>>>>>> 002b307c0f5ebe8f821d4d02739b564bafc1a61d
 
-  </article>
-
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="Instalacion">Instalacion Inicial</h2>
-  <article>
-    podemos encotra la lista de lo que debemos instalar en el repositorio
-    <a href="https://gist.github.com/sergiecode">sergicode</a>
-    para trabajar con React JS, primero hay que instalr
-    <strong>node.js</strong>, tambien hay que instalar <strong>vite</strong>,
-    ademas de unos Snippets en visual Studio Code que son:
-    vsc React Simple React Snippets <a
-      href="https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets">link de descarga</a>
-    vsc React ES7+ React/Redux/React-Native snippets<a
-      href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets">Segundo link de
-      descarga</a> <br>
-    Para Manejar colores y tipos de iconos se instala la extension Material-icons. <br><br>
-    si quieres que el programador sepa que tipo de datos es el que se entá pasando en una <strong>Prop</strong> , hay que instalar: <br>
-    npm i prop-types <br>
-    
-  </article>
-
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="react+vite">React+vite primer proyecto</h2>
-  <article>
-    gracias a <strong>vite</strong> que nos permite generar la estructura de un proyecto para react, donde
-    podemos escoger la tecnologia a utilizar ya sea JavaScript, TypeScritp, Svelte
-    en esta pagina podemos encontrar la documentacion oficial en español:
-    <a href="https://es.vitejs.dev/guide/">Guia de vite</a>
-    para iniciar nuetro primer proyecto debemos ejecutar el siguiente codigo desde la consola de
-    comando del windows o PowerShell de windows, tambien me funcionó utilizando Git.
-    <pre>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="react+vite">React+vite primer proyecto</h2>
+    <article>
+      gracias a <strong>vite</strong> que nos permite generar la estructura de
+      un proyecto para react, donde podemos escoger la tecnologia a utilizar ya
+      sea JavaScript, TypeScritp, Svelte en esta pagina podemos encontrar la
+      documentacion oficial en español:
+      <a href="https://es.vitejs.dev/guide/" target="_blank">Guia de vite</a>
+      para iniciar nuetro primer proyecto debemos ejecutar el siguiente codigo
+      desde la consola de comando del windows o PowerShell de windows, tambien
+      me funcionó utilizando Git.
+      <pre>
         <code>
           npm create vite@latest
         </code>
     </pre>
 
-    Despues no pide el nombre del proyecto yo le coloque primer-proyecto, y la tecnologia seria:
-    <strong>React</strong> despues hay un submenu donde escogi <strong>Javascript + Swc</strong>
-    Para poder ejecutar el codigo
-    <pre>
+      Despues no pide el nombre del proyecto yo le coloque primer-proyecto, y la
+      tecnologia seria:
+      <strong>React</strong> despues hay un submenu donde escogi
+      <strong>Javascript + Swc</strong>
+      Para poder ejecutar el codigo
+      <pre>
           <code>
             cd primer-proyecto
             npm install
             npm run dev
           </code>
     </pre>
+    </article>
 
-  </article>
-
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="primerComponente">Primer Componente</h2>
-  <article>
-    Un componente es una pieza de intefaz grafica (UI) que contiene su propia funcionalidad, de tal forma es un pedazo
-    dentro de una aplicacion.
-    En otra palabras son funciones de Javascrips que devuelve markup (marcado) a la pagina de donde se importe.
-    para utilizar React hay que tener instalado los Snippets de visual estudio, por ejemplo para crear un funcion
-    componente
-    se escribe <strong>ffc</strong>
-    <pre>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="primerComponente">Primer Componente</h2>
+    <article>
+      Un componente es una pieza de intefaz grafica (UI) que contiene su propia
+      funcionalidad, de tal forma es un pedazo dentro de una aplicacion. En otra
+      palabras son funciones de Javascrips que devuelve markup (marcado) a la
+      pagina de donde se importe. para utilizar React hay que tener instalado
+      los Snippets de visual estudio, por ejemplo para crear un funcion
+      componente se escribe <strong>ffc</strong>
+      <pre>
         <code>
           function PrimerComponente() {
             return ( &lt;h1>Hola mundo&lt;/h1> );
@@ -120,9 +190,9 @@
         </code>
       </pre>
 
-    para llamar a nuestro PrimerComponente tenemos que importarlo desde nuestro archivo <strong>main.jsx</strong>,
-    quedando de la siguiente forma:
-    <pre>
+      para llamar a nuestro PrimerComponente tenemos que importarlo desde
+      nuestro archivo <strong>main.jsx</strong>, quedando de la siguiente forma:
+      <pre>
       <code>
         import React from 'react'
         import ReactDOM from 'react-dom/client'
@@ -136,9 +206,11 @@
       </code>
     </pre>
 
-    con el atajo de teclado alt + Shift + F (Formatea el docuemento) en visual studio Code. <br>
-    La forma recomendada en la actualidad es usar el Snippets <strong>rafc</strong> que crea una funcion flecha
-    <pre>
+      con el atajo de teclado alt + Shift + F (Formatea el docuemento) en visual
+      studio Code. <br />
+      La forma recomendada en la actualidad es usar el Snippets
+      <strong>rafc</strong> que crea una funcion flecha
+      <pre>
       <code>
         import React from 'react'
 
@@ -149,57 +221,55 @@
         }
       </code>
     </pre>
-    Pero cambia la forma de llamardo ahora en el momento de importarlo hay que colocar entre llaves <strong>{ }</strong>
-    quedando el codigo de la siguiente forma:
-    <pre>
+      Pero cambia la forma de llamardo ahora en el momento de importarlo hay que
+      colocar entre llaves <strong>{ }</strong>
+      quedando el codigo de la siguiente forma:
+      <pre>
       <code>
         import { Componente2 } from './Componente2'
       </code>
     </pre>
+    </article>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="snippets">Snippets mas utiliado en React</h2>
+    <article>
+      podemos ver toda la docuemntacion de los Snippets desde el siguiente link
+      <table>
+        <thead>
+          <tr>
+            <th>sniper</th>
+            <th>uso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>cc</td>
+            <td>Clase componente (ya no se recomienda).</td>
+          </tr>
+          <tr>
+            <td>ffc</td>
+            <td>funcion componente.</td>
+          </tr>
+          <tr>
+            <td>rafc</td>
+            <td>funcion componente flecha recomedada para usar Hooks.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
 
-  </article>
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="snippets">Snippets mas utiliado en React</h2>
-  <article>
-    podemos ver toda la docuemntacion de los Snippets desde el siguiente link
-    <table>
-      <thead>
-        <tr>
-          <th>sniper</th>
-          <th>uso </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>cc</td>
-          <td>Clase componente (ya no se recomienda).</td>
-        </tr>
-        <tr>
-          <td>ffc</td>
-          <td>funcion componente.</td>
-        </tr>
-        <tr>
-          <td>rafc</td>
-          <td>funcion componente flecha recomedada para usar Hooks.</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </article>
-
-
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="variables">Variables</h2>
-  <article>
-    <strong>Nota: </strong> Los nombres de los componente debe esta con mayuscula inicial o sale error al momento de
-    importarlo, ademas es una
-    convencion de buenas practicas.
-    para pasar los variables desde un componente al <strong>main.jsx</strong> para que lo renderise React, hay que
-    escribir la variables
-    entre llaves <strong>{ }</strong>, quedando de la siguiente forma:
-    <pre>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="variables">Variables</h2>
+    <article>
+      <strong>Nota: </strong> Los nombres de los componente debe esta con
+      mayuscula inicial o sale error al momento de importarlo, ademas es una
+      convencion de buenas practicas. para pasar los variables desde un
+      componente al <strong>main.jsx</strong> para que lo renderise React, hay
+      que escribir la variables entre llaves <strong>{ }</strong>, quedando de
+      la siguiente forma:
+      <pre>
       <code>
         const wordSerntence='frase de prueba'
         const numero=145678
@@ -217,10 +287,10 @@
         }
       </code>
     </pre>
-    los campos primitivos como string, numeros, boleanos y array se pasan sin ningun problemas, las funciones deben
-    colocar los parentesis para que se ejecute,
-    ejemplo:
-    <pre>
+      los campos primitivos como string, numeros, boleanos y array se pasan sin
+      ningun problemas, las funciones deben colocar los parentesis para que se
+      ejecute, ejemplo:
+      <pre>
       <code>
         const funcionFlecha=()=>1+1
  
@@ -232,10 +302,11 @@
         }
       </code>
     </pre>
-    En cuanto a los objetos , los objeto tipo fecha y los JSON sale error para poder enviarlos hay que converirlos
-    primeros a string usando <strong>stringify</strong>
-    ejemplo:
-    <pre>
+      En cuanto a los objetos , los objeto tipo fecha y los JSON sale error para
+      poder enviarlos hay que converirlos primeros a string usando
+      <strong>stringify</strong>
+      ejemplo:
+      <pre>
       <code>
         const objeto={nombre:'Curso de javascrip',duracion:4}
         const fecha=new Date();
@@ -248,16 +319,17 @@
       
       </code>
     </pre>
-  </article>
+    </article>
 
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="fragmentos">Fragmentos</h2>
-  <article>
-    Si notamos en los ejemplos anteriores en caso que queremos devolver varias variables tendriamos un error, porque
-    para poder enviarlo hay que enviarlo envuelto desde un padre, envolviendo dentro de un <strong>Div</strong>,
-    quedando el codigo de la siguiente forma:
-    <pre>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="fragmentos">Fragmentos</h2>
+    <article>
+      Si notamos en los ejemplos anteriores en caso que queremos devolver varias
+      variables tendriamos un error, porque para poder enviarlo hay que enviarlo
+      envuelto desde un padre, envolviendo dentro de un <strong>Div</strong>,
+      quedando el codigo de la siguiente forma:
+      <pre>
       <code>
         const wordSerntence='frase de prueba'
         const numero=145678
@@ -283,9 +355,9 @@
 
       </code>
     </pre>
-    Esa era la forma antigua en que se hacia por eso es que aparecieron los <strong>Fragment</strong> quedanto de la
-    siguiente forma:
-    <pre>
+      Esa era la forma antigua en que se hacia por eso es que aparecieron los
+      <strong>Fragment</strong> quedanto de la siguiente forma:
+      <pre>
       <code>
         const wordSerntence='frase de prueba'
         const numero=145678
@@ -311,29 +383,31 @@
 
       </code>
     </pre>
-    Tambien se puede cambiar la etiqueta <strong>Fragment</strong> por simplemento <strong>&lt; &gt;</strong>
-  </article>
+      Tambien se puede cambiar la etiqueta <strong>Fragment</strong> por
+      simplemento <strong>&lt; &gt;</strong>
+    </article>
 
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="hooks">Uso de Hooks</h2>
-  <article>
-    Las funciones que comienzan con <strong>use</strong> se llaman <strong>Hooks</strong>. useState es un Hook nativo dentro de React. <br>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="hooks">Uso de Hooks</h2>
+    <article>
+      Las funciones que comienzan con <strong>use</strong> se llaman
+      <strong>Hooks</strong>. useState es un Hook nativo dentro de React. <br />
+    </article>
 
-  </article>
-
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="estilos">estilos style</h2>
-  <article>
-    para agregar un estilo a un componente debemos llamarlo de la siguinte forma dentro del <strong>main.jsx</strong> agregamo un import: <br>
-    <pre>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="estilos">estilos style</h2>
+    <article>
+      para agregar un estilo a un componente debemos llamarlo de la siguinte
+      forma dentro del <strong>main.jsx</strong> agregamo un import: <br />
+      <pre>
       <code>
         import './style.css' 
       </code>
     </pre>
-    y en el style.css ponemos por ejemplo: <br>
-    <pre>
+      y en el style.css ponemos por ejemplo: <br />
+      <pre>
       <code>
         body, html{
           background-color: antiquewhite;
@@ -342,19 +416,20 @@
       </code>
     </pre>
 
+      Las funciones que comienzan con <strong>use</strong> se llaman
+      <strong>Hooks</strong>. useState es un Hook nativo dentro de React. <br />
+    </article>
 
-    Las funciones que comienzan con <strong>use</strong> se llaman <strong>Hooks</strong>. useState es un Hook nativo dentro de React. <br>
-
-  </article>
-
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="props">props  propiedades</h2>
-  <article>
-    se utlizan para pasar informacion de un componente padre a un componente hijo. <br>
-    vamos a crear un componente llamado <strong>PrimerComponente.jsx</strong>, tenemos que utilizar el snippets <strong>rafc</strong> <br>
-    y nos genera el siguiente codigo: <br>
-    <pre>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="props">props propiedades</h2>
+    <article>
+      se utlizan para pasar informacion de un componente padre a un componente
+      hijo. <br />
+      vamos a crear un componente llamado <strong>PrimerComponente.jsx</strong>,
+      tenemos que utilizar el snippets <strong>rafc</strong> <br />
+      y nos genera el siguiente codigo: <br />
+      <pre>
       <code>
         import React from 'react'
 
@@ -366,9 +441,10 @@
 
       </code>
     </pre>
-    dentro de los parentices se pasa los <strong>props</strong> y desde el main.jsx se eviand el objeto con los atributos titulos y subtitulos 
-    de la siguiente forma: <br>
-    <pre>
+      dentro de los parentices se pasa los <strong>props</strong> y desde el
+      main.jsx se eviand el objeto con los atributos titulos y subtitulos de la
+      siguiente forma: <br />
+      <pre>
       import React from 'react'
       import ReactDOM from 'react-dom/client'
       import './style.css' 
@@ -380,9 +456,12 @@
           &lt;/React.StrictMode>,
       )
 
-    </pre>
-    al componente le quitmos al reurno los <strong>Div</strong> y dejamos simplemente los <strong>&lt;  &gt;</strong> quedando de la siguiente forma: <br>
-    <pre>
+    </pre
+      >
+      al componente le quitmos al reurno los <strong>Div</strong> y dejamos
+      simplemente los <strong>&lt; &gt;</strong> quedando de la siguiente forma:
+      <br />
+      <pre>
       <code>
         import React from 'react'
 
@@ -396,8 +475,10 @@
 
       </code>
     </pre>
-    ahora lo siguiente hay que <strong>desestructurar</strong> quitando la palabra <strong>prop</strong> y colocamos cada uno de los atributos entre llaves <strong>{ }</strong> <br>
-    <pre>
+      ahora lo siguiente hay que <strong>desestructurar</strong> quitando la
+      palabra <strong>prop</strong> y colocamos cada uno de los atributos entre
+      llaves <strong>{ }</strong> <br />
+      <pre>
       <code>
         import React from 'react'
 
@@ -411,11 +492,14 @@
         }
       </code>
     </pre>
-    en caso que el segundo parametro sea un numero, por decir algo un contador y dentro del componente hay que incrementarle uno, entonces hay
-    que especificar que sea numerico y en caso de pasarle un caracter hay que restringirlo, de la siguiente forma: <br>
-    en el main.jsx hay que quitar las comillas al pasar el subtitulos y colocarlos entre llaves <strong>{ }</strong>
+      en caso que el segundo parametro sea un numero, por decir algo un contador
+      y dentro del componente hay que incrementarle uno, entonces hay que
+      especificar que sea numerico y en caso de pasarle un caracter hay que
+      restringirlo, de la siguiente forma: <br />
+      en el main.jsx hay que quitar las comillas al pasar el subtitulos y
+      colocarlos entre llaves <strong>{ }</strong>
 
-    <pre>
+      <pre>
       import React from 'react'
       import ReactDOM from 'react-dom/client'
       import './style.css' 
@@ -427,10 +511,11 @@
           &lt;/React.StrictMode>,
       )
 
-    </pre>
-    y el componente que lo recibe quedaria el codigo así : <br>
+    </pre
+      >
+      y el componente que lo recibe quedaria el codigo así : <br />
 
-    <pre>
+      <pre>
       <code>
         import React from 'react'
 
@@ -445,17 +530,16 @@
       </code>
     </pre>
 
-    ahora para retringir que solo acepte numeros hay dos maneras de hacerlo y tambien podemos trabajar con valores por defecto de la siguiente forma: <br>
-
-
-  </article>
-  <a href="cursoReact.html">⏫</a>
-  <hr />
-  <h2 id="ventos">Eventos</h2>
-  <article>
-    Los eventos son los encargado de realizar una deteminada accion cuando son invocados a travez un clikc o el mouse o el teclado. <br>
-    
-  </article>
-</body>
-
+      ahora para retringir que solo acepte numeros hay dos maneras de hacerlo y
+      tambien podemos trabajar con valores por defecto de la siguiente forma:
+      <br />
+    </article>
+    <a href="cursoReact.html">⏫</a>
+    <hr />
+    <h2 id="ventos">Eventos</h2>
+    <article>
+      Los eventos son los encargado de realizar una deteminada accion cuando son
+      invocados a travez un clikc o el mouse o el teclado. <br />
+    </article>
+  </body>
 </html>
