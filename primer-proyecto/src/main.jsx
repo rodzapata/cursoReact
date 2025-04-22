@@ -6,10 +6,13 @@ import { Variables } from './Variables'
 import {Fragmento} from './Fragmento'
 import './style.css' 
 import { PrimerComponente } from './PrimerComponente'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+import { FotoCard } from './FotoCard'
+FotoCard
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <PrimerComponente titulo="Curso de React" subtitulo={10} />
-    {/* <PrimerComponente  /> */}
-  </React.StrictMode>,
-)
+    <FotoCard></FotoCard>
+  </React.StrictMode>
+);
+
