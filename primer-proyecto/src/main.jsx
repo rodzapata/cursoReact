@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <PrimerComponente titulo="Curso de React" subtitulo={10} />
-    <FotoCard></FotoCard>
+    <FotoCard nombre="rodney zapata" usuario="rzapata"></FotoCard>
   </React.StrictMode>
 );
 

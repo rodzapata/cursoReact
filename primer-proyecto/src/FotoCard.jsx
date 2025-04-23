@@ -1,13 +1,13 @@
-import logo from "../src/assets/foto_rodney.jpeg"
+import './FotoCard.css'
 
-export const  FotoCard =() =>{
+export const  FotoCard =({nombre, usuario}) =>{
     return(
-        <article>
-            <header>
-                <img src="../src/assets/foto_rodney.jpeg" alt="Foto" />
-                <div>
-                    <strong>Rodney Zapata</strong>
-                    <span>rozapata</span>
+        <article className="avatar">
+            <header className="avatar-titulo">
+                <img className="avatar-titulo-imagen" src="../src/assets/foto_rodney.jpeg" alt="Foto" />
+                <div className="avatar-info">
+                    <strong>{nombre}</strong>
+                    <span>{usuario}</span>
                 </div>
             </header>
             <aside>
