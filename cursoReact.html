@@ -25,6 +25,7 @@
     <li><a href="cursoReact.html#hooks">Hooks</a></li>
     <li><a href="cursoReact.html#estilos">estilos</a></li>
     <li><a href="cursoReact.html#props">props propiedades</a></li>
+    <li><a href="cursoReact.html#estados">estados en rect</a></li>
     <li><a href="cursoReact.html#eventos">eventos</a></li>
     <li><a href="cursoReact.html#sidebar-acordion">Sidebar acordeon</a></li>
   </ul>
@@ -504,12 +505,66 @@
     tambien podemos trabajar con valores por defecto de la siguiente forma:
     <br />
   </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="estados">Estados en React</h2>
+  <article>
+    cuando queremos observar si el valor de una variable ha cambiado necesitamos crearle un <strong>estado</strong>,
+    <br>
+    para eso tenenos que importarlo como se muestra a continuacion: <br>
+    <pre>
+      import { useState } from 'react';
+    </pre>
+    ahora vamos a crear la variable <strong>contador</strong> y colocaremos como predeterminado <strong>0</strong>,
+    quedando el codigo asi:
+    <pre>
+      cost [contador, setContador ]= useState(0);
+    </pre>
+
+    ahora dentro de una funcion incrementamos el valor del contador de la siguiente forma: <br>
+    <pre>
+      <code>
+        function MyButton() {
+          const [contador, setContador] = useState(0);
+  
+          function handleClick() {
+            setCount(contador + 1);
+          }
+  
+          return (
+            &lt;button onClick={handleClick}>
+              Hiciste clic {count} veces
+            &lt;/button>
+          );
+        }
+      </code>
+    </pre>
+  </article>
   <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="ventos">Eventos</h2>
   <article>
     Los eventos son los encargado de realizar una deteminada accion cuando son
-    invocados a travez un clikc o el mouse o el teclado. <br />
+    invocados a travez un clikc o el mouse o el teclado. <br /> por ejemplo si tengo un boton :
+    <pre>
+      &lt;button>
+        procesar
+      &lt;/button>
+    </pre>
+    y queremos que al acerle click muestre por pantalla una alerta con el mendaje presionaste click, <br>
+    entonces hay que llamar al evento <strong>onClick=</strong> para que funcione debe estar encerrado entre
+    llaves <strong>{ }</strong> para que el navegador sepa que es codigo de Javascrips quedando de la siguiente forma;
+    <br>
+    la funcion interna se acostumbra que sea una funcion flecha <strong>() => alert("presiono click")</strong>
+    <br>
+    <pre>
+      &lt;button onClick={() => alert("presiono click")}>
+        procesar
+      &lt;/button>
+    </pre>
+
+    </pre>
   </article>
 
   <a href="cursoReact.html">⏫</a>
@@ -517,7 +572,7 @@
   <h2 id="sidebar-acordion">Sidebar Acordion</h2>
   <article>
     Una vez creado el proyecto con <strong>Vite</strong>, debemos instalar las siguientes depedencias : <br>
-    boostrap 5.3 
+    boostrap 5.3
     <pre>
       npm install bootstrap
     </pre>
