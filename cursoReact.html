@@ -28,6 +28,7 @@
     <li><a href="cursoReact.html#estados">estados en rect</a></li>
     <li><a href="cursoReact.html#eventos">eventos</a></li>
     <li><a href="cursoReact.html#sidebar-acordion">Sidebar acordeon</a></li>
+    <li><a href="cursoReact.html#copiar-proyecto">copia proyecto rect + fastAPI</a></li>
   </ul>
 
   <a href="cursoReact.html">⏫</a>
@@ -588,6 +589,46 @@
     </pre>
   </article>
 
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="copiar-proyecto">Copiar proyecto React + FastAPI</h2>
+  <article>
+    Para no tener problemas al momento de copiar el proyecto en otro equipo, debemos crear un archivo <strong>requirements.txt</strong>. <br>
+    desde el equipo de origen de la siguiente forma:  si tienes un entorno de <strong>venv</strong> primero hay que activarlo. <br>
+    <pre>
+      en windows 
+      venv\Scripts\activate
+
+    </pre>
+    en mi caso desde console de visual studio no me funciono me tocó hacerlo desde <strong>cmd</strong> <br>
+    <pre>
+      cd venv\Scripts
+      activate
+      
+    </pre>
+    <pre>
+      en linux 
+      source venv/bin/activate
+
+    </pre>
+    <pre>
+      pip freeze > requirements.txt
+
+    </pre>
+    Una vez activado debemos ejecutar el comando que almacena los requirements. <br>
+    y desde el equipo de destino una vez copiado la carpeta instalamos con el siguiente comando
+    <pre>
+      pip install -r requirements.txt
+
+    </pre>
+    copiamos el requirements.txt al equipo de destino y realizamos los siguiente: <br>
+    <pre>
+      python -m venv venv
+      venv\Scripts\activate
+      pip install -r requirements.txt
+      
+    </pre>
+  </article>
 </body>
 
 </html>
