@@ -29,8 +29,13 @@
     <li><a href="cursoReact.html#eventos">eventos</a></li>
     <li><a href="cursoReact.html#sidebar-acordion">Sidebar acordeon</a></li>
     <li><a href="cursoReact.html#copiar-proyecto">copia proyecto rect + fastAPI</a></li>
+    <li><a href="cursoReact.html#NodeJS">NodeJS para el back End</a></li>
+    <li><a href="cursoReact.html#NestJS">NestJS Framework basado en Node para el back End</a></li>
+    <li><a href="cursoReact.html#NextJS">NextJS Framework en el Front End</a></li>
+    <li><a href="cursoReact.html#TestNextJS">testear NextJS </a></li>
   </ul>
 
+  
   <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="referencia">Referencias</h2>
@@ -629,6 +634,93 @@
       
     </pre>
   </article>
+
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="NodeJS">NodeJS para el backEnd</h2>
+  <article>
+    tutorial de Fazt <a href="https://www.youtube.com/watch?v=i3OdKwuBjeM" target="_blank" rel="noopener noreferrer">NodeJS</a> <br>
+
+  </article>
+
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="nestJS">NestJS framework basado en Node para el backEnd</h2>
+  <article>
+    tutorial de Fazt <a href="https://www.youtube.com/watch?v=wsqcg5ZtUMM" target="_blank" rel="noopener noreferrer">NestJS</a> <br>
+    pligin de visual studio Code recomendados para trabajar con NestJS : <br>
+    <pre>
+      Material Icon Theme: para que coloque las carpertas con los iconos de NestJS
+      Thunder Client: para probar los EndPoint similar a PostMan pero desde visual studio Code 
+      En el navegador de Crome agregar la extension Json viewer 
+    </pre>
+    Intalamos NestJS en el computador : 
+    <pre>
+      npm install -g @nestjs/cli
+    </pre>
+    creamos el proyecto de NestJS e instalamos dependencias :
+    <pre>
+      nest new prov-api
+      cd nest-prov-api
+
+      npm install --save @nestjs/typeorm typeorm mssql
+    </pre>
+    ejecutamos el servicio con :
+    <pre>
+      nest start
+    </pre>
+    y para comprobar que este corriendo cosultamos el puerto 3000 que es por defecto.
+    <pre>
+      http://localhost:3000/
+    </pre>
+    tambien lo podemos ejecutar en modo de desarrollo
+    <pre>
+      npm run dev 
+    </pre>
+    pero si queremos que el servicio se actualice cada vez que cambie la informacion :
+    <pre>
+      npm start : dev
+    </pre>
+    para construir el codigo se ejecuta:
+    <pre>
+      nest build
+    </pre>
+    esto nos crea una carpeta <strong>dist</strong> que es el codigo compilado que se va desplegar en el servidor.
+    entonces una vez compilado lo ejecutamos asi desde el servidor : 
+    <pre>
+      npm start
+    </pre>
+
+
+  </article>
+
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="nextJS">NextJS framework del lago del Front End</h2>
+  <article>
+    tutorial de Fazt <a href="https://www.youtube.com/watch?v=_SPoSMmN3ZU&t=158s" target="_blank" rel="noopener noreferrer">NextJS</a> <br>
+
+  </article>
+
+      <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="TestNextJS">testNextJS para testear </h2>
+  <article>
+    <pre>
+      ¿Qué herramienta usar en Next.js?
+      1. Para pruebas unitarias / integración:
+      ✅ Jest (más común en Next.js)
+      
+      ✅ React Testing Library
+      
+      ✅ @testing-library/jest-dom (para mejores matchers)
+      
+      ✅ MSW (para simular APIs si necesitas)
+    </pre>
+    Tutorial para testear <a href="https://www.youtube.com/watch?v=AS79oJ3Fcf0" target="_blank" rel="noopener noreferrer">Test Dave Gray</a>
+
+  </article>
+
 </body>
 
 </html>
