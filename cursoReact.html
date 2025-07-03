@@ -18,6 +18,7 @@
     <li><a href="cursoReact.html#instalacion">Instalacion iniciales</a></li>
     <li><a href="cursoReact.html#IIS">Habilitar IIS en Windows</a></li>
     <li><a href="cursoReact.html#react+vite">React + Vite primer proyecto</a></li>
+    <li><a href="cursoReact.html#habilitar-terminal">habilitar ejecucion npm desde visual studio Code</a></li>
     <li><a href="cursoReact.html#primerComponente">Primer Componente</a></li>
     <li><a href="cursoReact.html#snippets">Snippets</a></li>
     <li><a href="cursoReact.html#variables">Variables</a></li>
@@ -32,14 +33,17 @@
     <li><a href="cursoReact.html#NodeJS">NodeJS para el back End</a></li>
     <li><a href="cursoReact.html#NestJS">NestJS Framework basado en Node para el back End</a></li>
     <li><a href="cursoReact.html#NextJS">NextJS Framework en el Front End</a></li>
+    <li><a href="cursoReact.html#tailwind">Tailwind CSS</a></li>
     <li><a href="cursoReact.html#TestNextJS">testear NextJS </a></li>
   </ul>
 
-  
+
   <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="referencia">Referencias</h2>
   <article>
+    Podemos encontrar un recurdo muy bueno donde aparece a cabalidad todo lo relacionado con React y es de Miduve. <br>
+    <a href="https://cursoreact.dev/" target="_blank" rel="noopener noreferrer">Curso de react Miduve</a> <br>
     En esta pagina podemos encontra la documentacion de React en españo
     <a href="https://es.react.dev/learn" target="_blank">aprende React</a>,
     para la realizacion de este curso tomamos como base el curso de
@@ -147,6 +151,24 @@
           </code>
     </pre>
   </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="habilitar-terminal">habiliar ejecucion de npm en la terminal de visual studio code</h2>
+  <article>
+    por defecto la terminal de visual studio code no nos permite ejecutar el <strong>npm</strong> <br>
+    para habilitarlo ejecutamos <strong>power shell</strong> como administrador y luego ejecutamos :
+    <pre>
+      Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+    </pre>
+    luego nos sale un mensaje donde pide la confirmacion, escribimos <strong>s</strong> on <strong>y</strong> <br>
+    para saber que version de React tengo en mi proyecto ejecuto:
+    <pre>
+      npm list react
+    </pre>
+  </article>
+
 
   <a href="cursoReact.html">⏫</a>
   <hr />
@@ -598,8 +620,10 @@
   <hr />
   <h2 id="copiar-proyecto">Copiar proyecto React + FastAPI</h2>
   <article>
-    Para no tener problemas al momento de copiar el proyecto en otro equipo, debemos crear un archivo <strong>requirements.txt</strong>. <br>
-    desde el equipo de origen de la siguiente forma:  si tienes un entorno de <strong>venv</strong> primero hay que activarlo. <br>
+    Para no tener problemas al momento de copiar el proyecto en otro equipo, debemos crear un archivo
+    <strong>requirements.txt</strong>. <br>
+    desde el equipo de origen de la siguiente forma: si tienes un entorno de <strong>venv</strong> primero hay que
+    activarlo. <br>
     <pre>
       en windows 
       venv\Scripts\activate
@@ -635,33 +659,35 @@
     </pre>
   </article>
 
-    <a href="cursoReact.html">⏫</a>
+  <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="NodeJS">NodeJS para el backEnd</h2>
   <article>
-    tutorial de Fazt <a href="https://www.youtube.com/watch?v=i3OdKwuBjeM" target="_blank" rel="noopener noreferrer">NodeJS</a> <br>
+    tutorial de Fazt <a href="https://www.youtube.com/watch?v=i3OdKwuBjeM" target="_blank"
+      rel="noopener noreferrer">NodeJS</a> <br>
 
   </article>
 
-    <a href="cursoReact.html">⏫</a>
+  <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="nestJS">NestJS framework basado en Node para el backEnd</h2>
   <article>
-    tutorial de Fazt <a href="https://www.youtube.com/watch?v=wsqcg5ZtUMM" target="_blank" rel="noopener noreferrer">NestJS</a> <br>
+    tutorial de Fazt <a href="https://www.youtube.com/watch?v=wsqcg5ZtUMM" target="_blank"
+      rel="noopener noreferrer">NestJS</a> <br>
     pligin de visual studio Code recomendados para trabajar con NestJS : <br>
     <pre>
       Material Icon Theme: para que coloque las carpertas con los iconos de NestJS
       Thunder Client: para probar los EndPoint similar a PostMan pero desde visual studio Code 
       En el navegador de Crome agregar la extension Json viewer 
     </pre>
-    Intalamos NestJS en el computador : 
+    Intalamos NestJS en el computador :
     <pre>
       npm install -g @nestjs/cli
     </pre>
     creamos el proyecto de NestJS e instalamos dependencias :
     <pre>
       nest new prov-api
-      cd nest-prov-api
+      cd prov-api
 
       npm install --save @nestjs/typeorm typeorm mssql
     </pre>
@@ -686,7 +712,7 @@
       nest build
     </pre>
     esto nos crea una carpeta <strong>dist</strong> que es el codigo compilado que se va desplegar en el servidor.
-    entonces una vez compilado lo ejecutamos asi desde el servidor : 
+    entonces una vez compilado lo ejecutamos asi desde el servidor :
     <pre>
       npm start
     </pre>
@@ -694,15 +720,32 @@
 
   </article>
 
-    <a href="cursoReact.html">⏫</a>
+  <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="nextJS">NextJS framework del lago del Front End</h2>
   <article>
-    tutorial de Fazt <a href="https://www.youtube.com/watch?v=_SPoSMmN3ZU&t=158s" target="_blank" rel="noopener noreferrer">NextJS</a> <br>
+    tutorial de Fazt <a href="https://www.youtube.com/watch?v=_SPoSMmN3ZU&t=158s" target="_blank"
+      rel="noopener noreferrer">NextJS</a> <br>
+    lo primero es crear el proyecto de NextJS : <br>
+    <pre>
+      npx create-next-app@latest
+    </pre>
+    ejecutamos el proyecto de nextJS
+    <pre>
+      npm run dev
+    </pre>
 
   </article>
 
-      <a href="cursoReact.html">⏫</a>
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="Tailwind">Tailwind CSS</h2>
+  <article>
+    Dentro de Visual studio Code hay que instalar la extension <strong>Tailwind CSS intellisen</strong> <br>
+
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
   <hr />
   <h2 id="TestNextJS">testNextJS para testear </h2>
   <article>
@@ -717,7 +760,8 @@
       
       ✅ MSW (para simular APIs si necesitas)
     </pre>
-    Tutorial para testear <a href="https://www.youtube.com/watch?v=AS79oJ3Fcf0" target="_blank" rel="noopener noreferrer">Test Dave Gray</a>
+    Tutorial para testear <a href="https://www.youtube.com/watch?v=AS79oJ3Fcf0" target="_blank"
+      rel="noopener noreferrer">Test Dave Gray</a>
 
   </article>
 
