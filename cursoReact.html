@@ -31,7 +31,8 @@
     <li><a href="cursoReact.html#sidebar-acordion">Sidebar acordeon</a></li>
     <li><a href="cursoReact.html#copiar-proyecto">copia proyecto rect + fastAPI</a></li>
     <li><a href="cursoReact.html#NodeJS">NodeJS para el back End</a></li>
-    <li><a href="cursoReact.html#NestJS">NestJS Framework basado en Node para el back End</a></li>
+    <li><a href="cursoReact.html#nestJS">NestJS Framework basado en Node para el back End</a></li>
+    <li><a href="cursoReact.html#configurar-puerto">Configurar puerto de sqlserver</a></li>
     <li><a href="cursoReact.html#NextJS">NextJS Framework en el Front End</a></li>
     <li><a href="cursoReact.html#tailwind">Tailwind CSS</a></li>
     <li><a href="cursoReact.html#TestNextJS">testear NextJS </a></li>
@@ -691,7 +692,13 @@
 
       npm install --save @nestjs/typeorm typeorm mssql
     </pre>
-    ejecutamos el servicio con :
+    si la ejecucion desde visual studio code no funciona es que hay que habilitarlo <br>
+    Abrimos el cmd desde administrador y ejecutamos el siguiente comando. <br>
+    <pre>
+        Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+    </pre>
+    si solicita la confirmacion se presiona <strong>S</strong> o <strong>y</strong>
     <pre>
       nest start
     </pre>
@@ -721,8 +728,61 @@
       nest g resource dpto
 
     </pre>
+    instalamos validaciones para los DTO 
+    <pre>
+      npm install class-validator class-transformer
+
+    </pre>
+    instalamos dependencias de swagger
+    <pre>
+      npm install --save @nestjs/swagger swagger-ui-express
+
+    </pre>
+    instalamos JWT y autenticación:
+    <pre>
+      npm install @nestjs/jwt @nestjs/passport passport passport-jwt bcrypt
+      npm install --save-dev @types/passport-jwt
+
+    </pre>
+    una vez configurado Swagger para ver la documentacion escribimos:
+    <pre>
+      http://localhost:3000/api/
+    </pre>
+  </article>
+
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="configurar-puerto">Configurar puerto de sqlserver</h2>
+  <article>
+    primero queremos saber que puerto esta utilizando sqlserver, lo primero que debemos averiguar es el numero del
+    servicio
+    <pre>
+      tasklist | find /i "sqlservr.exe"
+
+    </pre>
+    el servicio tiene el numero 23000, ahora debemos averiguar el puerto en el que corre el proceso.
+    <pre>
+      netstat -oan | find /i "23000"
+    </pre>
+
+    Para cambiar el puerto en el que esta corriendo el sqlserver hay que realizar:
+    <pre>
+
+      para cambiar el puerto de sqlserver hay que entra a panel de control
+      Herramientas del Sistemas --- Administración de Equipo
+      Debajo de Administración de Disco hay uno que se llama 
+      Servicios y aplicaciones
+      después se escoge SQL Server Configuration Manager
+      y se escoge la opción SQL server network configuración
+      se abre una ventana con 2 pestañas (protocolo , IP adresss)
+      hay escoger la de IP apress y buscar al final la que dice IPAII
+      TCP Dynamics Port: 51537 colocamos el puerto que queremos
+    </pre>
+    Al final hay que reiniciar el servicio, a veces incluso hay que reinicar el computador para que tome los cambios
 
   </article>
+
 
   <a href="cursoReact.html">⏫</a>
   <hr />
