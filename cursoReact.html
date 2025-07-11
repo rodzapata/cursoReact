@@ -28,11 +28,17 @@
     <li><a href="cursoReact.html#props">props propiedades</a></li>
     <li><a href="cursoReact.html#estados">estados en rect</a></li>
     <li><a href="cursoReact.html#eventos">eventos</a></li>
+    <li><a href="cursoReact.html#renderizado-condicional">Renderizado Condicional</a></li>
+    <li><a href="cursoReact.html#ciclo-vida">ciclo de vida de los componentes UseEfect()</a></li>
+    <li><a href="cursoReact.html#fetch">fetch() para consumir api rest</a></li>
+    <li><a href="cursoReact.html#formulario-envio">formulario de envio Submit</a></li>
+    <li><a href="cursoReact.html#formulario-envio-objeto">formulario enviando objeto Usuario</a></li>
     <li><a href="cursoReact.html#sidebar-acordion">Sidebar acordeon</a></li>
     <li><a href="cursoReact.html#copiar-proyecto">copia proyecto rect + fastAPI</a></li>
     <li><a href="cursoReact.html#NodeJS">NodeJS para el back End</a></li>
     <li><a href="cursoReact.html#nestJS">NestJS Framework basado en Node para el back End</a></li>
     <li><a href="cursoReact.html#configurar-puerto">Configurar puerto de sqlserver</a></li>
+    <li><a href="cursoReact.html#habilitar-cors">habilitar CORS</a></li>
     <li><a href="cursoReact.html#NextJS">NextJS Framework en el Front End</a></li>
     <li><a href="cursoReact.html#tailwind">Tailwind CSS</a></li>
     <li><a href="cursoReact.html#TestNextJS">testear NextJS </a></li>
@@ -548,7 +554,7 @@
     ahora vamos a crear la variable <strong>contador</strong> y colocaremos como predeterminado <strong>0</strong>,
     quedando el codigo asi:
     <pre>
-      cost [contador, setContador ]= useState(0);
+      const [contador, setContador ]= useState(0);
     </pre>
 
     ahora dentro de una funcion incrementamos el valor del contador de la siguiente forma: <br>
@@ -595,6 +601,309 @@
 
     </pre>
   </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="renderizado-condicional">renderizado condicional</h2>
+  <article>
+    Como su nombre lo indica cuando se cumple una condicion se debe mostrar el componente, por ejemplo en App.jsx vamos a crear un estado 
+    <strong>showChild</strong>, y un boton de tal forma que cuando se haga click en el boton cambia el estado al valor contrario es decir,
+    si se esta activo se desactiva y vicebersa.
+    la condicion debe ponerse entre <strong>{ }</strong> se evalua la codicion y se coloca <strong>&&</strong>, quedando la condicion
+    asi:
+    <pre>
+      {showChild && &lt;CicloVida> &lt;/CicloVida>}
+    </pre>
+    ahora dentro del boton con el evento <strong>onClick</strong> se coloca entre llaves un callback donde se llama cambia el estado
+    <pre>
+      <code>
+        import { useState } from "react";
+        import { CicloVida } from "./src/components/CicloVida";
+        const App = () => {
+          const [showChild, setShowChild]= useState();
+        
+          return (
+            &lt;>
+              &lt;h1>Ciclo de vida uso de usEfect()&lt;/h1>
+              &lt;button onClick={ ()=> setShowChild(!showChild) }>Llamar hijo&lt;/button>
+              {showChild && &lt;CicloVida> &lt;/CicloVida>}
+           
+            &lt;/>
+          );
+        };
+        
+        export default App;
+      </code>
+    </pre>
+    Ahora vamos a crear un contador el el compoenete ciclo de vida y cada de vez que se se mueste se incremente el contador.
+    quedando el codigo asi:
+    <pre>
+      import { useEffect, useState } from "react"
+      
+      export const CicloVida = () =&gt; {
+          const [contador, setContador]=useState(0)
+          useEffect(()=>{
+              console.log("mostrar componente renderizado")
+              }
+      
+          )
+      
+        return (
+          &lt;div className="bordeCuadrado">
+          CicloVida
+          &lt;h3>{contador}</h3>
+          &lt;button onClick={()= &gt; setContador(contador+1)}&gt;Incrementar&lt;/button>
+          &lt;/div>
+        )
+      }
+    </pre>
+
+    El detalle es que cada vez que se le da click al boton del componente ciclo de vida se recarga todo el componente,
+    para que este no suceda en useEffect() se debe colocar un <strong>[ ]</strong> corchetes en blanco
+    <pre>
+      useEffect(()=>{
+        console.log("mostrar componente renderizado")
+        },[]
+
+      )
+    </pre>
+    por ultimo si queremos que cuando se destrulla un componente se ejecute algo debemos retornar un <strong>return </strong>
+    dentro del useEfect() con otro callback con el mensaje
+    <pre>
+        useEffect(()=>{
+        return()=>{
+            console.log("componente se ha desmontado")
+        }
+        },[]
+    )
+
+    </pre>
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="ciclo-vida">ciclo de vida UseEfect</h2>
+  <article>
+
+  </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="fetch">llamar a API rest usando Fetch()</h2>
+  <article>
+    el codigo para la llamada de la API, creamos un componente llamado <strong>ComponenteFetch</strong> y el codigo es:
+    <pre>
+      import React, { useEffect, useState } from 'react'
+      
+      export const ComponenteFech = () => {
+      const [dptos, setDptos]=useState([]);
+      
+      const getDptos = async ()=>{
+        const response = await fetch('http://localhost:3000/api/dpto/');
+        const data = await  response.json();
+        setDptos(data);
+      }
+      
+      useEffect( ()=&lt;{
+        getDptos();
+      },[]
+      
+      )
+      
+      const htmlDptos= dptos.map((dpto)=>{
+        return (
+            &lt;div key={dpto.id}>
+                &lt;h3>{dpto.nombreDpto}&lt;/h3>
+            &lt;/div>
+        )
+      
+      })
+      return (
+        &lt;div>
+          &lt;h1>Consultamos la API&lt;/h1>
+          &lt;section>{htmlDptos}&lt;/section>
+      
+        &lt;/div>
+      )
+      }
+    </pre>
+  </article>
+
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="formulario-envio">Formulario de envio</h2>
+  <article>
+    dentro de la etiquepta de html usamos el mentodo <strong>onSubmit</strong> para enviar el formulario, debemos pasarle entre parentices
+    el nombre de la funcion que se ejecutara de la siguente forma:
+    <pre>
+        &lt;form onSubmit={hadleSubmit}>
+            &lt;fieldset>
+                &lt;label htmlFor="txtUsuario">Usuario&lt;/label>
+                &lt;input type="text"  id="txtUsuario" />
+            &lt;/fieldset>
+            &lt;fieldset>
+                &lt;label htmlFor="txtPassword">Password&lt;/label>
+                &lt;input type="text" id="txtPassword" />
+            &lt;/fieldset>
+            &lt;button >Enviar&lt;/button>
+        &lt;/form>
+
+    </pre>
+    dentro de la funcion <strong>hadleSubmit</strong>, tenemos que desabilitar el mecanimos predeterminado para que no se recargue
+    la pagina cada vez que se envie quedando de esta forma:
+    <pre>
+        const hadleSubmit=(e)=>{
+          e.preventDefault(); // forma correcta
+          console.log("formulario se ha enviado");
+        }
+    </pre>
+  </article>
+
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="formulario-envio-objeto">Formulario de envio de objeto Usuario</h2>
+   <article>
+    el codigo complete quedaria así:
+    
+    <pre>
+      import React, { useState } from 'react'
+      
+      export const FormUser = () => {
+        const [user, setUser]=useState(
+            {
+                username:"",
+                password:""
+            }
+        );
+      
+      
+        const handleSubmit=(e)=>{
+            e.preventDefault(); // forma correcta
+            console.log(user);
+            console.log("formulario se ha enviado");
+        }
+      
+        const handleChange=(e)=>{
+            const{name, value} =e.target;
+            setUser({...user, [name]:value});
+        }
+      
+      return (
+        &lt;div>
+            &lt;form onSubmit={handleSubmit}>
+                &lt;fieldset>
+                    &lt;label htmlFor="username">Usuario&lt;/label>
+                    &lt;input type="text"  name="username" id='username' onChange={handleChange} value={user.username}/>
+                &lt;/fieldset>
+                &lt;fieldset>
+                    &lt;label htmlFor="password">Password&lt;/label>
+                    &lt;input type="text" name="password" id="password" onChange={handleChange} value={user.password}/>
+                &lt;/fieldset>
+                &lt;button type="submit">Enviar&lt;/button>
+            &lt;/form>
+        &lt;/div>
+      )
+      }
+      
+    </pre>
+
+  </article>
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="router">Rutas Router</h2>
+   <article>
+    para este ejemplo crearemos un proyecto de vite totalmente nuevo desde cero donde iremos creando las 
+    diferentes rutas y las paginas que seran llamadas.  
+    <pre>
+      npm create vite@latest
+    </pre>
+    el nombre de proyecto le coloque <strong>rutas</strong>  siguientes pasos
+    <pre>
+      cd rutas
+      npm install
+      npm run dev
+    </pre>
+    El router no se instala por defecto y hay que hacerlo de forma manual escribiendo:
+    <pre>
+      npm i react-router-dom
+    </pre>
+    dentro de la <strong>main.jsx</strong> agregamos <strong>BrowserRouter</strong> que envuelbe a <strong>App</strong>,
+    quedando el codigo a continuacion:
+    <pre>
+     
+      import { StrictMode } from 'react'
+      import { createRoot } from 'react-dom/client'
+      import App from './App.jsx'
+      import { BrowserRouter } from 'react-router-dom'
+      
+      createRoot(document.getElementById('root')).render(
+        &lt;StrictMode>
+          &lt;BrowserRouter>
+            &lt;App />
+          &lt;/BrowserRouter>
+        &lt;/StrictMode>,
+      )
+    </pre>
+
+    y en el componente <strong>App.jsx</strong> colocamos las diferentes rutas
+
+    <pre>
+      import { Route, Routes } from 'react-router-dom'
+      import { Home } from './pages/Home'
+      import { About } from './pages/About'
+      import { NotFound } from './pages/NotFound'
+      
+      function App() {
+      
+        return (
+          &lt;>
+          &lt;Routes>
+            &lt;Route path='/' element={&lt;Home/>}/>
+            &lt;Route path='about' element={&lt;About/>}/>
+            &lt;Route path="*" element={&lt;NotFound/>}/>
+          &lt;/Routes>
+          &lt;/>
+        )
+      }
+      
+      export default App
+
+    </pre>
+    crearemos la carpeta <strong>components</strong> donde crearemos un componente llamado <strong>HeaderComponent.jsx</strong> que contiene el encabezado de todas las paginas,
+    donde colocaremos la navegacion 
+    <pre>
+      import { Link } from 'react-router-dom'
+      
+      export const HeaderComponent = () => {
+        return (
+          &lt;header>
+              &lt;h1>Bienvenido</h1>
+              &lt;nav>
+                  &lt;Link to="/home">Home &lt;/Link>
+                  &lt;Link to="/about">About &lt;/Link>
+                  &lt;Link to="/blog">Blog &lt;/Link>
+              &lt;/nav>
+          &lt;/header>
+        )
+      }
+    </pre>
+    Creamos la carpetas <strong>pages</strong> donde guardaremos cada una de las paginas que seran llamado en las rutas,
+    la pagina <strong>Home</strong> debe importar el <strong>HeaderComponent</strong> quedando el codigo asi:
+    <pre>
+      import { HeaderComponent } from '../components/HeaderComponent'
+      
+      export const Home = () => {
+        return (
+          &lt;>
+          &lt;HeaderComponent>&lt;/HeaderComponent>
+          &lt;div>Home&lt;/div>
+          &lt;/>
+        )
+      }
+     
+    </pre>
+   </article>
+
 
   <a href="cursoReact.html">⏫</a>
   <hr />
@@ -748,6 +1057,11 @@
     <pre>
       http://localhost:3000/api/
     </pre>
+    creamos Pipe Adicional Necesito que recorte los espacios en blanco en los DTO
+    <pre>
+      nest g pipe common/pipes/trim.pipe.ts
+    </pre>
+    
   </article>
 
 
@@ -782,6 +1096,48 @@
     Al final hay que reiniciar el servicio, a veces incluso hay que reinicar el computador para que tome los cambios
 
   </article>
+
+  <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="habilitar-cors">Habilitar CORS</h2>
+  <article>
+    para habilitar los CORS lo realizamos en em <strong>main.ts</strong> quedando el codigo completo:
+    <pre>
+      
+      import { NestFactory } from '@nestjs/core';
+      import { AppModule } from './app.module';
+      import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+      import { TrimPipe } from './common/pipes/trim.pipe.ts/trim.pipe.ts.pipe';
+      
+      async function bootstrap() {
+        const app = await NestFactory.create(AppModule);
+      
+        // ✅ Habilitar CORS
+        app.enableCors({
+          origin: '*', // ⚠️ Cambia esto por tu dominio en producción, ej: 'http://localhost:4200'
+          methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+          credentials: true,
+        });
+      
+        // Pipe global
+        app.useGlobalPipes(new TrimPipe());
+      
+        // swagger
+        const config = new DocumentBuilder()
+          .setTitle('API DIAN')
+          .setDescription('CRUD Departamentos y Municipios')
+          .setVersion('1.0')
+          .addBearerAuth() // Habilita el botón de JWT
+          .build();
+      
+        const document = SwaggerModule.createDocument(app, config);
+        SwaggerModule.setup('api', app, document);
+      
+        await app.listen(3000);
+      }
+      bootstrap();
+    </pre>
+  </article> 
 
 
   <a href="cursoReact.html">⏫</a>

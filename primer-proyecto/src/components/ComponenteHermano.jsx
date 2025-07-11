@@ -1,5 +1,3 @@
-import React from "react";
-
 const ComponenteHermano = (props) => {
   return (
     <div className="bordeCuadrado">

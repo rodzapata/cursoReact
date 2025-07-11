@@ -20,11 +20,11 @@ export const ComponenteForm = (props) => {
         <label htmlFor="txtDireccion">Direccion</label>
         <input type="text" name="txtDireccion" id="txtDireccion" />
         <br />
-        <label htmlFor="curso"></label>
+        <label htmlFor="cmbCurso">Curso</label>
         <select
           defaultValue="Python"
           name="cmbCurso"
-          id="smbCurso"
+          id="cmbCurso"
           onChange={hadlecmb}
         >
           <option value="C#">C#</option>
