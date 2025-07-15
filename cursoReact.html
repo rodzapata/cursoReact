@@ -33,6 +33,8 @@
     <li><a href="cursoReact.html#fetch">fetch() para consumir api rest</a></li>
     <li><a href="cursoReact.html#formulario-envio">formulario de envio Submit</a></li>
     <li><a href="cursoReact.html#formulario-envio-objeto">formulario enviando objeto Usuario</a></li>
+    <li><a href="cursoReact.html#router">router</a></li>
+    <li><a href="cursoReact.html#context">Context</a></li>
     <li><a href="cursoReact.html#sidebar-acordion">Sidebar acordeon</a></li>
     <li><a href="cursoReact.html#copiar-proyecto">copia proyecto rect + fastAPI</a></li>
     <li><a href="cursoReact.html#NodeJS">NodeJS para el back End</a></li>
@@ -902,6 +904,97 @@
       }
      
     </pre>
+   </article>
+
+    <a href="cursoReact.html">⏫</a>
+  <hr />
+  <h2 id="context">context</h2>
+   <article>
+    ¿Qué es useContext?
+    Es un hook que te permite compartir datos globales entre componentes sin tener que pasarlos por props manualmente (prop drilling). <br>
+    se puede usar cuando necesitamo Compartir datos globales como el idioma, el tema (oscuro/claro), el usuario autenticado, etc. <br>
+    Creamos el contexto AuthContext.js
+
+    <pre>
+      import { createContext, useContext } from 'react';
+      
+      // Simulación del usuario autenticado
+      const fakeUser = {
+        name: 'Rodney',
+        role: 'admin', // Cambia a 'user' o 'guest' para probar
+      };
+      
+      export const AuthContext = createContext();
+      
+      export function AuthProvider({ children }) {
+        return (
+          &lt;AuthContext.Provider value={{ user: fakeUser }}>
+            {children}
+          &lt;/AuthContext.Provider>
+        );
+      }
+      
+      export function useAuth() {
+        return useContext(AuthContext);
+      }
+  
+    </pre>
+    Componente para proteger rutas – PrivateRoute.js
+    <pre>
+      
+      import { Navigate } from 'react-router-dom';
+      import { useAuth } from './AuthContext';
+      
+      export function PrivateRoute({ children, requiredRole }) {
+        const { user } = useAuth();
+      
+        // Si el rol del usuario no coincide, redirige
+        if (user.role !== requiredRole) {
+          return &lt;Navigate to="/not-authorized" replace />;
+        }
+      
+        return children;
+      }
+    </pre>
+
+    Definir rutas protegidas  App.js
+    <pre>
+      
+      import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+      import { AuthProvider } from './AuthContext';
+      import { PrivateRoute } from './PrivateRoute';
+      
+      import HomePage from './pages/HomePage';
+      import AdminPage from './pages/AdminPage';
+      import NotAuthorized from './pages/NotAuthorized';
+      
+      function App() {
+        return (
+          &lt;AuthProvider&gt;
+            &lt;Router>
+              &lt;Routes>
+                &lt;Route path="/" element={&lt;HomePage />} />
+                
+                &lt;Route
+                  path="/admin"
+                  element={
+                    &lt;PrivateRoute requiredRole="admin">
+                      &lt;AdminPage />
+                    &lt;/PrivateRoute>
+                  }
+                />
+      
+                &lt;Route path="/not-authorized" element={<NotAuthorized />} />
+              &lt;/Routes>
+            &lt;/Router>
+          &lt;/AuthProvider>
+        );
+      }
+      
+      export default App;
+      
+    </pre>
+
    </article>
 
 

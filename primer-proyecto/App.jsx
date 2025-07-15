@@ -27,7 +27,7 @@ const App = () => {
       <ComponenteFech></ComponenteFech>
       <h1>Formulario Usuario</h1>
       <FormUser></FormUser>
-   
+
     </>
   );
 };

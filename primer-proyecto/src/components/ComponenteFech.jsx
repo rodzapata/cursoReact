@@ -23,6 +23,7 @@ export const ComponenteFech = () => {
     )
 
   })
+  
   return (
     <div>
       <h1>Consultamos la API</h1>
