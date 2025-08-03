@@ -1,0 +1,62 @@
+🧠 OPCIÓN 1: Usando useContext
+🧩 Paso 1: Crear el contexto
+
+// ContadorContext.jsx
+import { createContext } from 'react';
+
+export const ContadorContext = createContext();
+
+🧩 Paso 2: Componente Padre que envuelve con el contexto
+// App.jsx
+import React, { useState } from 'react';
+import { ContadorContext } from './ContadorContext';
+import ComponenteIntermedio from './ComponenteIntermedio';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const incrementar = () => setCount(prev => prev + 1);
+
+  return (
+    <ContadorContext.Provider value={{ count, incrementar }}>
+      <h1>Contador: {count}</h1>
+      <ComponenteIntermedio />
+    </ContadorContext.Provider>
+  );
+}
+
+export default App;
+
+🧩 Paso 3: Componente intermedio que no necesita props
+jsx
+// ComponenteIntermedio.jsx
+import React from 'react';
+import ComponenteHijo from './ComponenteHijo';
+
+function ComponenteIntermedio() {
+  return (
+    <div>
+      <p>Intermedio (no recibe props)</p>
+      <ComponenteHijo />
+    </div>
+  );
+}
+
+export default ComponenteIntermedio;
+
+🧩 Paso 4: Componente hijo que accede al contexto
+// ComponenteHijo.jsx
+import React, { useContext } from 'react';
+import { ContadorContext } from './ContadorContext';
+
+function ComponenteHijo() {
+  const { incrementar } = useContext(ContadorContext);
+
+  return (
+    <button onClick={incrementar}>Incrementar desde el Hijo</button>
+  );
+}
+
+export default ComponenteHijo;
+
+
