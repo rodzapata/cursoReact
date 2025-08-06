@@ -25,7 +25,7 @@ function App() {
         <div className="Container">
           <Routes>
             <Route path='/' element={<DashboardPage />} />
-            <Route path='factura' element={<FacturasPage />} />
+            <Route path='facturas' element={<FacturasPage />} />
             <Route path='clientes' element={<ClientesPage />} />
             <Route path='*' element={<NotFoundPage />} />
 

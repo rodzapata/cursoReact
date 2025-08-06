@@ -4,7 +4,8 @@ import { ListadoFacturas } from '../components/ListadoFacturas'
 export const FacturasPage = () => {
   return (
     <>
-        <ListadoFacturas/>
+      <ListadoFacturas />
+
     </>
   )
 }
