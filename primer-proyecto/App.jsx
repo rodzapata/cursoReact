@@ -37,7 +37,7 @@ const App = () => {
       <FormUser></FormUser>
       <ContadorContext.Provider value={{ cont, incrementar }}>
         <h2>Contador es: {cont}</h2>
-        <ComponenteIntermedio></ComponenteIntermedio>
+        <ComponenteHijo></ComponenteHijo>
       </ContadorContext.Provider>
     </>
   );
