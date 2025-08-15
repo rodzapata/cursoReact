@@ -20,7 +20,7 @@ export const ListadoFacturas = () => {
             setFactura(facturasFalsas);
             setCargando(false);
 
-        }, 2000)
+        }, 1000)
     }
         , [])
 

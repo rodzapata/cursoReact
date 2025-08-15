@@ -1,0 +1,30 @@
+/* AppLayout.module.css */
+
+.appLayoutContainer {
+  display: grid;
+  /* Definimos dos columnas:
+      1. La primera (el sidebar) tendrá un ancho fijo de 280px.
+      2. La segunda (el contenido) tomará el resto del espacio disponible (1fr).
+    */
+  grid-template-columns: 280px 1fr;
+  height: 100vh;
+  /* El layout ocupa el 100% de la altura de la pantalla */
+  background-color: #f4f7fa;
+  /* Un color de fondo suave para el área de contenido */
+}
+
+.sidebar {
+  background-color: #ffffff;
+  /* El sidebar será blanco */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  /* Una sombra sutil para separarlo */
+  padding: 1.5rem;
+  /* Espaciado interno */
+}
+
+.mainContent {
+  padding: 2rem;
+  /* Espaciado interno para que el contenido no pegue a los bordes */
+  overflow-y: auto;
+  /* Si el contenido es muy largo, permite hacer scroll */
+}

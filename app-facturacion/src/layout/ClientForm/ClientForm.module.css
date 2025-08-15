@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+    --border-color: #ced4da;
+    --border-focus-color: #80bdff;
+    --text-color: #212529;
+    --label-color: #495057;
+    --background-color: #f8f9fa;
+    --border-radius: 6px;
+  }
+  
+  /* --- 1. Estilos globales --- */
+  /*
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  */
+  /* --- 2. Contenedor del Formulario --- */
+  .formContainer {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .formContainer h2 {
+    margin-top: 0;
+    color: var(--text-color);
+  }
+  
+  /* --- 3. Grupo de Label + Input --- */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    font-weight: 500;
+    color: var(--label-color);
+  }
+  
+  /* --- 4. Estilos para Inputs --- */
+  .formGroup input {
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: var(--border-focus-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* --- 5. Botón --- */
+  .submitBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submitBtn:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
