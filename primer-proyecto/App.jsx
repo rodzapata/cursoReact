@@ -7,9 +7,9 @@ import { FormUser } from "./src/components/FormUser";
 import ComponenteHijo from "./src/components/ComponenteHijo";
 import { ContadorContext } from "./src/components/ContadorContext";
 import ComponenteIntermedio from "./src/components/ComponenteIntermedio";
-
+import Mapear from "./src/pages/mapear";
 import ClientForm from "./src/components/ClientForm";
-
+import Prueba from "./src/pages/prueba";
 
 const App = () => {
   const [escoger, setEscoger] = useState();
@@ -43,9 +43,11 @@ const App = () => {
         <h2>Contador es: {cont}</h2>
         <ComponenteHijo></ComponenteHijo>
       </ContadorContext.Provider>
-            <ClientForm/>
+      <ClientForm />
+      <Mapear></Mapear>
+      <Prueba/>
 
-            
+
 
     </>
   );
