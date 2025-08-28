@@ -10,6 +10,8 @@ import ComponenteIntermedio from "./src/components/ComponenteIntermedio";
 import Mapear from "./src/pages/mapear";
 import ClientForm from "./src/components/ClientForm";
 import Prueba from "./src/pages/prueba";
+import Temas from "./src/pages/Temas";
+import Temas2 from "./src/pages/Temas2";
 
 const App = () => {
   const [escoger, setEscoger] = useState();
@@ -46,6 +48,8 @@ const App = () => {
       <ClientForm />
       <Mapear></Mapear>
       <Prueba/>
+      <Temas/>
+      <Temas2/>
 
 
 
