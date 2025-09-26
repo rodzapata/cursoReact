@@ -1,0 +1,28 @@
+27. ¿Cómo manejarías las excepciones o errores en un programa para evitar que este se cierre inesperadamente? (Explica una estrategia general de manejo de errores).
+
+paginas 12 promp para pruebas de testing
+
+--- 
+estilo Airbnb, buenas pracicas en la escritura de javascript y react
+PEP8 guia de buenas practicas en la escritura de Python
+
+🔹 ¿Qué es JSDoc?
+
+JSDoc es una herramienta que se usa en JavaScript (y también en TypeScript) para documentar el código directamente con comentarios especiales.
+Después, esos comentarios pueden convertirse en documentación HTML o simplemente servir como guía dentro del editor (VS Code, WebStorm, etc.), mostrando autocompletado e información de tipos.
+
+quedé por la pagina 16
+
+
+Actúa como un curador de contenido educativo. Recomienda los 3 mejores recursos (artículos, tutoriales en vídeo o cursos) para un desarrollador junior que quiere aprender sobre Ingles. Para cada recurso, indica por qué lo recomiendas.
+
+
+Actua como un programador Señor. y explicame sobre arquitectura de software y los marcos conceptuales.
+necesitos ejemplos reales y practicos.
+
+qudé por la pagina 20
+
+actua como un programador Señor. y exlicame
+cual es la diferencia entre un Callback tradicional y un la sintaxis async/await. ilustrame con ejemplos practicos.
+
+actua como 
