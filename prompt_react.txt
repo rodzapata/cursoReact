@@ -1,0 +1,5 @@
+Actua como un programador senior y explicame paso a paso los temas que debo aprender para convertirme un 
+un programador avanzado de React y NextJS, con ejemplos practicos.  
+
+Actua como un programador senior,
+quiero aprender react 18, guíame paso a paso los temas que necesito aprender con ejemplos y al final elabora una aplicacion web completa utilizando las mejores practicas  donde apliquemos todo lo aprendido, la aplicacion seria una aplicacion de facturacion que tenga un menu acordion y el back end es hecho en NestJS
