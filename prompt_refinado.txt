@@ -1,0 +1,118 @@
+hazme un prompt refinado que me ayude a entener POO usando TypeScript con ejemplos practicos
+y al final un proyecto de facturacion donde se aplique todo lo aprendido.
+
+
+=====
+Quiero que actúes como un profesor experto en Programación Orientada a Objetos (POO) con TypeScript. Enséñame paso a paso los conceptos principales de POO, siempre con explicaciones claras y ejemplos prácticos en TypeScript.
+
+Los temas que quiero aprender son:
+
+Clases y objetos.
+
+Propiedades y métodos.
+
+Encapsulamiento (public, private, protected).
+
+Constructores.
+
+Getters y setters.
+
+Herencia y superclases.
+
+Polimorfismo.
+
+Abstracción (clases abstractas e interfaces).
+
+Tipos genéricos aplicados a POO.
+
+Principios SOLID en TypeScript (explicación básica y ejemplos simples).
+
+Al enseñar cada tema:
+
+Explica primero qué es el concepto en teoría.
+
+Luego dame un ejemplo práctico simple en TypeScript.
+
+Después dame un ejemplo aplicado al mundo real (ejemplo: un sistema de facturación, inventario, usuarios, etc.).
+
+Finalmente, quiero que todo se una en un proyecto completo de facturación hecho en TypeScript, donde se apliquen todos los conceptos de POO aprendidos.
+Este proyecto debe incluir:
+
+Clases para Cliente, Producto, Factura y DetalleFactura.
+
+Uso de herencia y polimorfismo donde tenga sentido (por ejemplo, diferentes tipos de clientes o productos).
+
+Encapsulamiento y uso de getters/setters.
+
+Interfaces para definir contratos de clases.
+
+Un ejemplo de uso de principios SOLID.
+
+Código en TypeScript bien organizado y con comentarios.
+
+Al final quiero poder ejecutar un archivo principal (index.ts) que cree clientes, productos, genere una factura y muestre el resultado en consola.
+
+========================================= java spring boot ====================================
+
+hazme un prompt refinado que me ayude a entener POO usando Java Spring boot con ejemplos practicos
+y al final un proyecto de facturacion donde se aplique todo lo aprendido.
+
+==============
+
+Quiero que actúes como un profesor experto en Programación Orientada a Objetos (POO) usando Java y Spring Boot. Enséñame paso a paso los conceptos fundamentales de POO, siempre con explicaciones claras, ejemplos prácticos en Java y, cuando sea posible, aplicados en un contexto con Spring Boot.
+
+Los temas que quiero aprender son:
+
+Clases y objetos.
+
+Propiedades y métodos.
+
+Constructores.
+
+Encapsulamiento (public, private, protected).
+
+Getters y setters.
+
+Herencia y superclases.
+
+Polimorfismo.
+
+Abstracción (clases abstractas e interfaces).
+
+Inyección de dependencias en Spring Boot (cómo aplica a POO).
+
+Principios SOLID con ejemplos en Spring Boot.
+
+Para cada tema:
+
+Explica la teoría básica.
+
+Muéstrame un ejemplo simple en Java.
+
+Luego dame un ejemplo aplicado en Spring Boot (por ejemplo, usando entidades, servicios o controladores).
+
+Finalmente, quiero que todo se integre en un proyecto de facturación con Spring Boot, donde se apliquen todos los conceptos de POO aprendidos.
+
+Este proyecto debe incluir:
+
+Clases para Cliente, Producto, Factura y DetalleFactura.
+
+Uso de herencia y polimorfismo (por ejemplo, diferentes tipos de clientes o facturas).
+
+Encapsulamiento y uso de getters/setters.
+
+Interfaces y clases abstractas en servicios.
+
+Aplicación de Inyección de Dependencias de Spring Boot.
+
+Ejemplo de aplicación de principios SOLID.
+
+Código bien organizado por capas (entities, repositories, services, controllers, dtos).
+
+Un endpoint REST que permita crear clientes, productos, generar una factura y listar facturas.
+
+El resultado final debe ser un mini sistema de facturación en Spring Boot que se pueda ejecutar y probar con Postman o cualquier cliente REST.
+
+
+==================== Deep Research =============================
+
