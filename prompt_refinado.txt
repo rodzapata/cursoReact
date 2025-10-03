@@ -107,7 +107,7 @@ Aplicación de Inyección de Dependencias de Spring Boot.
 
 Ejemplo de aplicación de principios SOLID.
 
-Código bien organizado por capas (entities, repositories, services, controllers, dtos).
+Código bien organizado por capas (entities, repositories, services, controllers, dtos,  modelo de capas, mejores practicas, JWT, seguridad, asincronia).
 
 Un endpoint REST que permita crear clientes, productos, generar una factura y listar facturas.
 
@@ -116,3 +116,35 @@ El resultado final debe ser un mini sistema de facturación en Spring Boot que s
 
 ==================== Deep Research =============================
 
+hazme un prompt refinado que me ayude a entener n8n, no code, con ejemplos practicos de automatizacion.
+
+=========
+Actúa como un experto en automatización con n8n y enséñame desde lo más básico hasta lo avanzado. Quiero aprender qué es n8n, cómo funciona y cómo puedo aplicarlo en la vida real.
+
+Los temas que quiero aprender son:
+
+Introducción a n8n y diferencias con otras herramientas no-code (Zapier, Make, etc.).
+
+Conceptos clave: nodos, workflows, disparadores (triggers), expresiones.
+
+Cómo instalar y configurar n8n (local y en la nube).
+
+Ejemplos prácticos paso a paso de automatización, como:
+
+Guardar emails de Gmail en Google Sheets.
+
+Notificar en Slack/Telegram cuando llega un nuevo cliente en HubSpot o CRM.
+
+Subir archivos recibidos en un formulario (Typeform/Google Forms) a Google Drive/Dropbox.
+
+Automatizar la creación de facturas en PDF y enviarlas por correo.
+
+Buenas prácticas: manejo de errores, versionado, documentación de flujos.
+
+Casos de uso avanzados: consumir APIs externas con HTTP Request, usar Webhooks, trabajar con datos JSON.
+
+Cómo escalar y desplegar n8n en producción (Docker, servidores, cloud).
+
+Quiero que me expliques cada tema con ejemplos reales, casos prácticos y capturas de cómo sería el flujo en n8n. Además, dame ideas de automatizaciones útiles para un programador web y un analista de datos.
+
+Finalmente, haz un proyecto final paso a paso donde se construya una automatización completa que combine varias herramientas (ej: recoger datos de un formulario, procesarlos, guardarlos en una base de datos y enviar notificación).

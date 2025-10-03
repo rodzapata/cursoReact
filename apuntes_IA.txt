@@ -25,6 +25,8 @@ codex  IA
 agents.md
 buscar en la pagina web
 
+===== clase 3 =============
+n8n
 
 
 
