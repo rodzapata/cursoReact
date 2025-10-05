@@ -25,4 +25,18 @@ qudé por la pagina 20
 actua como un programador Señor. y exlicame
 cual es la diferencia entre un Callback tradicional y un la sintaxis async/await. ilustrame con ejemplos practicos.
 
-actua como 
+Actúa como un experto en ciberseguridad. explicameque son vurnerabiliad de :
+Inyección de SQL, Cross-Site Scripting (XSS), Path Traversal, dame ejemplos aplicable en el dia a dia de un programafor.
+
+Actúa como un arquitecto de software experimentado. Estoy enfrentando el siguiente problema de diseño: Una pagina ERP web, que tenga modulos de facturacion, compras, inventario, cartera, proyectos de obra, ordenes de trabajo, ordenes de servicio, etc.
+Sugiere 2 o 3 patrones de diseño que podrían ser una solución adecuada. Para cada patrón sugerido, proporciona:
+1. Una breve explicación de qué es.
+2. Por qué es una buena opción para este problema específico.
+3. Una lista de sus pros y contras en este contexto.
+
+Actúa como un arquitecto de software experimentado. explicame que son plataformar CI y cual me recomiendas para la realizacion de un ERP web ?
+
+----quedé por la pagina 26 -------
+
+Explica [concepto_programación] como instructor para principiantes. Incluye: explicación breve, ejemplos simples, casos de uso reales, errores comunes, ejercicios progresivos. Usar [lenguaje] para ejemplos.
+
