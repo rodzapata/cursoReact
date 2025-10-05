@@ -1,0 +1,34 @@
+NotebookLM 
+Perplexity AI
+"hazme un prompt refinado " que me ayude a entener POO usando Java Spring boot con ejemplos practicos
+y al final un proyecto de facturacion donde se aplique todo lo aprendido.
+
+Gemini
+Deep Research "explora un profundidad un tema "
+
+
+excalidraw.com para dibujar diseño del proyecto
+Firebase studio.  Genera plantilla para la realizacion de la pagina web.
+incluye base de datism, SEO, 
+nos crea un prototipo y ademas podemos editarlo con un vstudio oneline
+
+studio.firebase.google.com
+ 
+
+==== clase 2 ==============
+
+claude Code
+metodologia TDD, codigo seguro y testeable
+
+codex  IA
+
+agents.md
+buscar en la pagina web
+
+===== clase 3 =============
+n8n
+
+
+
+
+
