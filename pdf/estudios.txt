@@ -1,0 +1,51 @@
+diseño agil con TDD
+voy par la pagina 36
+
+codificar con técnicas de XP (eXtreme Programming) , concretamente TDD.
+y gestionar el proyecto con SCRUM.
+
+la idea es que en cada interacion, no se este resolviendo defectos,
+sino ir puliendo las cosas que ya funcionan.
+
+voy pagina 39
+voy pagina 45
+
+las pantallas no re diseñan al comienzo, sino al ginal, cuando los 
+requisitos de negoicos ya se cumplen.
+los requisitos son frases cortas en lenguaje natural que ejecuta una
+maquina automaticamente, ya que tiene forma de test, con lo que se
+sabe cuando se ha implementado.
+
+si las pantallas se diseñan primero, se contamina la logica del negocio
+con la interpretacion que el diseñador pueda hacer de los requisitos y
+corremos el riesgo de escribir un codigo sujeto a la UI en lugar de los
+requisitos, lo cual lo hace dificil de modificar ante cambios futuros en
+el negocio.
+tanto la UI como el diseño de la la base de datos se hacen al final.
+
+el orden correcto es :
+1. Test de aceptacion
+2. test de desarrollo que acabara en la capa de datos que pide las persistencia.
+
+Que es Gherkin ?
+Es un leguaje de texto que utiliza palabras claves given, when y then para escrbir
+los requisitos del software.
+
+Cucumber, lee e interpreta los archivos hechos en Gherkin con la extension .feacture
+y ejecutas las pruebas unitarias.
+TDD (Test Driven Development)  Desarrollo dirigido por pruebas
+BDD (Behavior Driven Development) Desarrollo dirigido por Comportamiento 
+
+DSL (Domain Specific Language) Lenguaje Especifico de Dominio
+
+Playwright o Cypress, son herramientas para BDD que han hido remplazando de Cucumber.
+
+Playwright es de microsoft 
+Cypress esta enfocada al Front End (nada mas funciona para probar javaascrip y typescrip)
+Serenity nos muestra informes mas completo del mercado, pero la curva de aprendizaje es compleja,
+u utiliza el patron Screenplay .
+
+
+
+
+ 
