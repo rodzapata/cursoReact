@@ -46,6 +46,39 @@ Serenity nos muestra informes mas completo del mercado, pero la curva de aprendi
 u utiliza el patron Screenplay .
 
 
+voy pagina 51
+Algoritmo TDD
+1. escribir la especificacion del requisito (el ejemplo, el test)
+2. implementar el codigo segun dicho ejemplo.
+3. refactorizar para eliminar duplicidad y hacer mejoras.
+
+voy pagina 57
+"Working Effectively with Legacy Code” por Michael C. Feathers[
+https://understandlegacycode.com/blog/key-points-of-working-effectively-with-legacy-code/
+
+Desarrollo Dirigido por Test de Aceptacion (ATDD)
+La lista de cada ejemplo(Test) de cada Historia de Usuario
+Ejemplos de historias de usuarios:
+Formulario de inscripcion
+login en el sistema
+reservar una habitacion
+añadir un libro al carrito de la compra
+pagar con tarjeta de credito
+anota el dia festivo en el calendario
+informe de los articulos mas vendidos
+
+Deben ser Breves, concretas y algo estimables. Consiste en escuchar al cliente y ayudarlo a resumir
+el requisito en una sola frase. Debe estar escrita en el vocabulario del negocio del cliente.
+
+voy pagina 60
+
+
+
+
+
+
+
+
 
 
  
