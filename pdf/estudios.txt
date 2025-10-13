@@ -72,9 +72,247 @@ el requisito en una sola frase. Debe estar escrita en el vocabulario del negocio
 
 voy pagina 60
 
+PABLA1048(937159).
+
+⚙️ Herramientas más utilizadas para ATDD (2025)
+
+Aquí tienes las más reconocidas y usadas profesionalmente según el ecosistema tecnológico:
+
+🧰 Herramienta	💡 Descripción	🌍 Ecosistema / Lenguaje	🧪 Tipo de test
+Cucumber	Permite escribir pruebas en lenguaje natural (Gherkin) que se enlazan con código automatizado.	Java, JavaScript, Python, Ruby, .NET, Kotlin	Pruebas de aceptación y BDD
+Behave	Alternativa a Cucumber en Python.	Python	ATDD / BDD
+SpecFlow	Versión de Cucumber para .NET. Integra con Visual Studio.	.NET (C#, F#)	ATDD / BDD
+Robot Framework	Framework open source para ATDD y RPA. Muy usado en pruebas de aceptación de sistemas grandes.	Python (pero soporta cualquier lenguaje vía librerías)	ATDD, UI, API
+FitNesse	Wiki que permite definir y ejecutar pruebas de aceptación colaborativamente.	Java / .NET	ATDD clásico
+JBehave	Framework precursor de Cucumber, enfocado en ATDD y BDD para Java.	Java	ATDD / BDD
+Gauge (de ThoughtWorks)	Permite escribir especificaciones ejecutables en Markdown. Ligero y moderno.	Java, C#, JavaScript, Python	ATDD
+🏆 Recomendación por ecosistema
+Stack / Lenguaje	Herramienta recomendada	Motivo
+Java / Spring Boot	✅ Cucumber + JUnit 5	Soporte amplio, integración con CI/CD, sintaxis Gherkin, documentación viva.
+.NET / C#	✅ SpecFlow	Integración nativa con Visual Studio y Azure DevOps.
+Python	✅ Behave o Robot Framework	Facilidad de uso, documentación clara.
+JavaScript / TypeScript / Node.js	✅ Cucumber.js o Playwright Test + Gherkin plugin	Perfecto para frontends React / Angular.
+Entornos heterogéneos o RPA	✅ Robot Framework	Versátil y potente para pruebas funcionales completas.
+
+=====================
+
+La herramienta más utilizada y estandarizada globalmente para ATDD es Cucumber, especialmente en proyectos Java, JavaScript o .NET.
+Si trabajas en entornos empresariales o con equipos ágiles, Cucumber (o su equivalente en tu stack, como SpecFlow o Behave) es la opción más recomendable por:
+
+Sintaxis legible (Gherkin).
+
+Integración con frameworks de testing (JUnit, NUnit, Jest, etc.).
+
+Soporte CI/CD (Jenkins, GitHub Actions, Azure).
+
+Documentación ejecutable y colaborativa.
+
+playwright + cucumber: configuración inicial  JoanMedia ES
+
+https://www.youtube.com/watch?v=Su08K9Rp8Uk
+
+=== según la opinión del autor ======
+no se recomienda hacer diagramas de clases antes que el código, sino todo lo contrario, una vez teniendo el 
+código se utilizar una herramienta que genere el diagrama de clase, esto nos permite hechas un vistazo a 
+las entidades de manera global.
+
+la entidades emergen a base de un código que a su vez se basa en los ejemplos prácticos y ejecutables.
+
+cada historia depende de muchas preguntas a cerca de los múltiples contexto que se pueden presentar.
+
+¿Qué hace el sistema si el libro que se quiere añadir al carrito ya
+está dentro de él?
+¿Qué sucede si se ha agotado el libro en el almacén?
+¿Se le indica al usuario que el libro ha sido añadido al carrito de
+la compra?
+
+Por tanto, cada historia de
+usuario tiene asociados uno o varios tests de aceptación (ejemplos):
+
+respuesta a las preguntas: 
+Añadir libro X en stock produce: “El libro X ha sido añadido al carrito”
+Libro X está contenido en el carrito
+Libro X ya no está en catálogo de libros
+
+el xUnit es el encargado de crear el codigo de prueba del test de aceptación
+realizado en cumcumber o también puede ser Concordion.
+
+Una de las claves de ATDD es justamente que nos permite centrarnos
+en el qué y no en el cómo.
+
+Como saber si esta hecho o no ?
+
+Que es test de regresión (Regression Test) ?
+Un test de regresión (Regression Test) es una prueba automatizada o manual que se ejecuta después de realizar cambios en el código (por ejemplo: una nueva funcionalidad, corrección de errores o refactorización) con el fin de asegurar que el comportamiento existente del sistema no se haya roto o alterado.
+
+voy por la pagina 67
+
+
+🧩 1️⃣ ATDD — Acceptance Test-Driven Development
+
+(Desarrollo Dirigido por Pruebas de Aceptación)
+🔹 Definición
+
+ATDD es una metodología ágil donde desarrolladores, testers y el cliente (o negocio) colaboran antes de escribir código para definir los criterios de aceptación que determinan cuándo una funcionalidad será considerada “terminada y aceptada”.
+
+🔹 Ciclo de ATDD
+
+Definir los criterios de aceptación (en lenguaje natural)
+Se describe el comportamiento esperado desde el punto de vista del usuario.
+
+1. Automatizar esos criterios como pruebas (por ejemplo, en Gherkin con Cucumber).
+
+2. Desarrollar el código hasta que las pruebas pasen.
+
+3. Refactorizar el código y mantener las pruebas como parte de la regresión.
+
+🧩 2️⃣ STDD — Specification Test-Driven Development
+
+(Desarrollo Dirigido por Pruebas de Especificación)
+
+🔹 Definición
+
+STDD se centra en escribir pruebas que verifican el comportamiento esperado del sistema según su especificación técnica o funcional.
+
+A diferencia del ATDD (que se enfoca en la aceptación por el cliente), STDD se enfoca en cómo el sistema debe comportarse internamente, según las reglas del negocio o la API.
+
+👉 En otras palabras:
+
+En STDD defines las especificaciones del sistema en forma de pruebas antes de implementar la lógica.
+
+🔹 Ciclo de STDD
+
+1. Analizas la especificación técnica (por ejemplo, un documento o contrato de API).
+
+2. Escribes pruebas de especificación (unitarias o de integración) que reflejen ese comportamiento.
+
+3. Desarrollas el código hasta que todas las pruebas pasen.
+
+3.4 el contexto es esencial.
+
+
+voy paginas 67
+
+libro recomenmdados para leer y descargar
+si bien se podría escribir un libro sobre ello. Mike Cohn
+escribió uno muy popular titulado User Stories Applied[5] que le recomiendo
+encarecidamente leer. Mención especial también al capítulo
+sobre ATDD de Lasse Koskela en Test Driven[9] y los sucesivos, que
+incluyen ejemplos sobre el framework FIT. Gojko Adzic[1] tiene un libro
+basado en FitNesse y por supuesto cabe destacar su famoso libro sobre
+Acceptance Testing[2]. Elisabeth Hendrickson, en colaboración con
+otros expertos de la talla de Brian Marick, publicó un paper que puede
+leerse online3 e incluye ejemplos en el framework Robot.
+
+Que se entiende por Test de Caja blanca y Test de caja negra ?
+
+🧩 1️⃣ Test de Caja Negra (Black Box Testing)
+🔹 Definición
+
+En un test de caja negra, el tester no conoce la estructura interna del código.
+Solo se enfoca en las entradas (inputs) y salidas (outputs) del sistema.
+
+👉 En otras palabras:
+
+Se prueba qué hace el sistema, no cómo lo hace.
+
+🧩 2️⃣ Test de Caja Blanca (White Box Testing)
+🔹 Definición
+
+En un test de caja blanca, el tester conoce la lógica interna del código y diseña pruebas para verificar su comportamiento interno, flujo, condiciones y estructuras de control.
+🔹 Características
+
+No se necesita conocer el código fuente.
+
+Se prueban funcionalidades completas (desde fuera).
+
+Ideal para pruebas de aceptación, integración o sistema.
+
+Se basa en los requisitos y criterios de aceptación.
+
+👉 En otras palabras:
+
+Se prueba cómo funciona el sistema por dentro, no solo el resultado.
+
+El objetivo es comprobar la correctitud lógica del código y asegurar que cada camino posible se ejecuta al menos una vez.
+
+🔹 Características
+
+Requiere conocer el código fuente.
+
+Se usa para tests unitarios y pruebas de integración interna.
+
+Se enfoca en ramas, condiciones, bucles y cobertura de código.
+
+Permite detectar errores lógicos, ramas no ejecutadas o código muerto.
+
+pagina 71
+
+Los tests de carga y de rendimiento son de aceptación
+cuando el cliente los considera requisitos de negocio. Si el cliente no
+los requiere, serán tests de desarrollo.
+
+
+🧩 1️⃣ Definición de SUT (Subject Under Test)
+
+SUT (Subject Under Test) significa literalmente “el sujeto bajo prueba”.
+Es el componente del sistema que estás probando directamente — puede ser:
+
+Una clase
+
+Un método
+
+Un módulo
+
+Un servicio
+
+O incluso un endpoint de una API
+
+👉 En otras palabras:
+
+El SUT es el objeto principal sobre el que se ejecuta la prueba para verificar su comportamiento.
+
+Hay herramientas
+que permiten hacer lo mismo mediante programación: nos dan una API
+para seleccionar controles gráficos, y accionarlos desde código fuente,
+comprobando el estado de la ejecución con sentencias condicionales o
+asertivas.
+El propio Selenium lo permite. Una de las herramientas más
+populares es Watir8 para Ruby y sus versiones para otros lenguajes
+de programación (Watin para .Net). Para aplicaciones escritas con el
+framework Django (Python), se utiliza el cliente web9. Para aplicaciones
+de escritorio, hay frameworks específicos como UIAutomation10 o
+NUnitForms11 que también permiten manipular la interfaz gráfica desde
+código.
+
+Todo test
+unitario debe ser:
+Atómico
+Independiente
+Inocuo
+Rápido
+Si no cumple estas premisas entonces no es un test unitario, aunque
+se ejecute con una herramienta tipo xUnit.
+
+Test unitarios
+plataformas como Java (JUnit), .Net (NUnit),
+Python (PyUnit), Ruby (Rubyunit), Perl (PerlUnit), C++ (CppUnit), etc.
+Si aprendemos a trabajar con NUnit y PyUnit como veremos en este
+libro, sabremos hacerlo con cualquier otro framework tipo xUnit porque
+la filosofía es siempre la misma. Además en Java, desde la versión 4 de
+JUnit, se soportan las anotaciones por lo que NUnit y JUnit se parecen
+todavía más.
+
+Las tres partes del test: AAA
+Un test tiene tres partes, que se identifican con las siglas AAA en
+inglés: Arrange (Preparar), Act (Actuar), Assert (Afirmar).
+
+voy por la pagina 80
 
 
 
+
+ 
 
 
 
