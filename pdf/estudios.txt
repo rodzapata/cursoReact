@@ -310,6 +310,11 @@ inglés: Arrange (Preparar), Act (Actuar), Assert (Afirmar).
 voy por la pagina 80
 voy por la pagina 85
 
+crear aplicaciones web con node y express (JePaFe Net)
+https://www.youtube.com/watch?v=Gqr15Uvhr6s&list=PLxXpfdBOyZ_WZpH04MHQ8qepsA4Gs8cEk
+
+manejor de promesas (JePaFe Net)
+https://www.youtube.com/watch?v=tV4utgY7Tcs&list=PLxXpfdBOyZ_VOq9nU9G1zq2hsIQ27Vnhd&index=5
 
 
 

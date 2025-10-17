@@ -211,3 +211,9 @@ correcto en la elaboracion de un proyecto de software ?
 ==========
 actua como un arquitecto de software experto en metodologias agiles,
 explicame los criterios de aceptacion y prioridades ( MoSCoW, WSJF, etc)
+
+==============
+actua como un arquitecto de software experto en metodologias agiles, si quiero hacer
+una back End en javascript, tengo que usar Express o no es necesario ? 
+
+
