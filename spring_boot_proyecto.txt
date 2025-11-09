@@ -1,0 +1,18 @@
+desplegar aplicacion en render.com
+
+https://www.youtube.com/watch?v=2rkoryDkf6o
+
+se recomieda java 21 e imagen de docker
+
+si en render hay un plan que dice 2 GB de ram
+se refiere al tamaño de la base de datos,
+o al tamaño de la imagen de docker ?
+
+dockerizar spring boot
+
+https://www.youtube.com/watch?v=qcE4A81OAI0
+
+GitHub Container Registry
+para imagenes de docker en la nube
+
+
