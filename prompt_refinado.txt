@@ -657,5 +657,78 @@ te envio la estructura del json recibido
 ================================
 hazme un prompt refinado que me ayude a aprender REACT y arquitectura DDD, CQRS con ejemplos practicos
 y al final un proyecto de facturacion donde se aplique todo lo aprendido. utilizaremos jsx para la codificacion.
-y base de d
+
+==================
+necesito un codigo en React 18 que consulte la respuesta de un json que recibe un bearner token y un body en json y devuelve un json, el resultado lo quiero mostrar en una tabla de html que me muestre los registros de 10 en 10.
+te envio la estructura del json recibido
+{
+  "data": [
+    {
+      "CnsMcn": 2774109,
+      "Compania": "SP",
+      "Comprobante": "09",
+      "Documento": "QC01",
+      "CodContable": "220510",
+      "FTrans": "2025-10-15T00:00:00",
+      "Descripcion": "DE SUMINISTROS QC01 20251019",
+      "DoctoRef": "QC01",
+      "Valor": 569400,
+      "Tipo": "CR",
+      "Ano": "2025",
+      "Mes": "10",
+      "PeriodoN": "19",
+      "Ccosto": "",
+      "Empleado": "1007131597",
+      "Concepto": "A000",
+      "BancoG": "13",
+      "SucursalG": "13",
+      "CtaBcoG": "507001188",
+      "Dpto": "024",
+      "Area": "13",
+      "Grupo": "61",
+      "Proyecto": "01",
+      "Sucursal": "7",
+      "Base": 1423500.0634667226,
+      "Nivel": "TEC-AUX",
+      "Nrocontrato": "20250306"
+    },
+    {
+      "CnsMcn": 2774110,
+      "Compania": "SP",
+      "Comprobante": "09",
+      "Documento": "QC01",
+      "CodContable": "220510",
+      "FTrans": "2025-10-15T00:00:00",
+      "Descripcion": "DE SUMINISTROS QC01 20251019",
+      "DoctoRef": "QC01",
+      "Valor": 1225000,
+      "Tipo": "CR",
+      "Ano": "2025",
+      "Mes": "10",
+      "PeriodoN": "19",
+      "Ccosto": "",
+      "Empleado": "72181997",
+      "Concepto": "A000",
+      "BancoG": "07",
+      "SucursalG": "07",
+      "CtaBcoG": "48561814198",
+      "Dpto": "004",
+      "Area": "12",
+      "Grupo": "51",
+      "Proyecto": "",
+      "Sucursal": "1",
+      "Base": 2450000.1092332015,
+      "Nivel": "TEC-EXP",
+      "Nrocontrato": "20180418"
+    }
+  ],
+    "draw": null,
+    "recordsTotal": null,
+    "recordsFiltered": 9522,
+    "isInvalid": false,
+    "hasPagination": false
+
+}
+
+
 
