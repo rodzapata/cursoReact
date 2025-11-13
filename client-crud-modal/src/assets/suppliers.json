@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "companyName": "Refrigeraciones del Norte",
+    "contactName": "Carlos López",
+    "phone": "3101234567",
+    "email": "carlos@refrinorte.com"
+  },
+  {
+    "id": 2,
+    "companyName": "Aire Total",
+    "contactName": "María Torres",
+    "phone": "3209876543",
+    "email": "maria@airetotal.com"
+  },
+  {
+    "id": 3,
+    "companyName": "ClimaPro",
+    "contactName": "Luis Herrera",
+    "phone": "3105556677",
+    "email": "luis@climapro.com"
+  }
+]

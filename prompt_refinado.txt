@@ -730,5 +730,81 @@ te envio la estructura del json recibido
 
 }
 
+==================
+hazme un prompt refinado que me ayude a diseñar una base de datos de facturacion en postgresql 16.
+
+===============
+actua como un experto en base de datos de postgres 16, revisa el siguiente script y dame tu opinion que 
+se puede mejorar teniendo en cuenta 3FN y mejores practicas modernas
+
+CREATE DATABASE supplier;
+
+-- ========================================
+-- Tabla: state
+-- ========================================
+CREATE TABLE state (
+    id           BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name         VARCHAR(40) NOT NULL,
+    code         CHAR(2) NOT NULL,
+    country_code CHAR(2) NOT NULL DEFAULT 'CO',
+    created_at   TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at   TIMESTAMP NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT uq_state_code UNIQUE (code),
+    CONSTRAINT uq_state_name UNIQUE (name)
+);
+
+CREATE INDEX idx_state_name ON states (name);
 
 
+-- ========================================
+-- Tabla: county
+-- ========================================
+CREATE TABLE county (
+    id          BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    state_id    BIGINT NOT NULL,
+    name        VARCHAR(40) NOT NULL,
+    code   	CHAR(3) NOT NULL,
+    created_at  TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at  TIMESTAMP NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT fk_county_state
+        FOREIGN KEY (state_id) REFERENCES state(id)
+        ON UPDATE CASCADE
+        ON DELETE RESTRICT,
+
+    CONSTRAINT uq_county_name_per_state UNIQUE (state_id, name)
+);
+
+CREATE INDEX idx_county_state_id ON county (state_id);
+
+-- ========================================
+-- Tabla: customer
+-- ========================================
+CREATE TABLE customer (
+    id               BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nit		     VARCHAR(20) NOT NULL,
+    first_name       VARCHAR(50) NOT NULL,
+    middle_name      VARCHAR(50),          -- opcional
+    last_name        VARCHAR(50) NOT NULL,
+    second_last_name VARCHAR(50),          -- opcional
+    email            VARCHAR(120) UNIQUE,
+    phone            VARCHAR(30),
+    address          VARCHAR(150),
+    county_id	     BIGINT NOT NULL,
+    created_at       TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at       TIMESTAMP NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT fk_customer_county
+        	FOREIGN KEY (county_id) REFERENCES county(id));
+
+);
+
+CREATE INDEX idx_customer_nit ON customer (nit);
+
+================
+¿Quieres que te muestre un ejemplo  (actualizar updated_at, y audit_log) sin trigger, para ver cuál enfoque es más limpio desde el backend (por ejemplo  en Spring Boot y en  .NET)?
+
+===============
+actua como un experto en react 19, si necesito crear una pagina que consume un backEnd de clientes, pero no todos los usuarios tienen los mismos privilegios,
+para el CRUD , hay que hacer un formulario por cada opcion permitida del CRUD ?
