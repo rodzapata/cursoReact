@@ -808,3 +808,119 @@ CREATE INDEX idx_customer_nit ON customer (nit);
 ===============
 actua como un experto en react 19, si necesito crear una pagina que consume un backEnd de clientes, pero no todos los usuarios tienen los mismos privilegios,
 para el CRUD , hay que hacer un formulario por cada opcion permitida del CRUD ?
+
+===============
+hazme un prompt refinado que me ayude a aprender Next.JS y arquitectura DDD, CQRS con ejemplos practicos
+y al final un proyecto de facturacion donde se aplique todo lo aprendido. utilizaremos tsx para la codificacion. 
+
+Actúa como un instructor experto en Next.js, Arquitectura DDD (Domain-Driven Design), CQRS (Command Query Responsibility Segregation) y programación avanzada en TypeScript. Quiero aprender desde cero hasta nivel avanzado con ejemplos prácticos aplicados. Enséñame paso a paso, progresivamente y con ejercicios.
+
+1. Estructura del aprendizaje
+
+Enséñame en el siguiente orden:
+
+Fundamentos de Next.js (App Router, routing, layouts, server actions, server components y client components).
+
+Configuración de un proyecto Next.js con TypeScript.
+
+Buenas prácticas en estructura de carpetas para proyectos escalables.
+
+Introducción teórica clara y sencilla a DDD.
+
+Ejemplos prácticos de DDD:
+
+Entidades
+
+Value Objects
+
+Aggregates
+
+Repositories
+
+Domain Events
+
+Application Services
+
+Introducción clara a CQRS y cómo integrarlo con Next.js.
+
+Ejemplos completos de comandos (Write) y queries (Read).
+
+Cómo conectar DDD + CQRS con una API en Next.js (Route Handlers).
+
+Cómo manejar persistencia con Prisma + PostgreSQL bajo diseño DDD.
+
+Cómo organizar módulos de dominio en un proyecto real.
+
+2. Ejemplos prácticos
+
+En cada sección explícame con:
+
+Ejemplos en código .tsx / .ts
+
+Estructuras de carpetas reales
+
+Ejemplos de rutas Next.js
+
+Casos de uso reales
+
+Ejercicios para practicar
+
+Explicaciones simples y directas
+
+3. Proyecto final obligatorio
+
+Al final enséñame a crear un proyecto real de facturación aplicando DDD + CQRS + Next.js que incluya:
+
+Dominios requeridos
+
+Customer
+
+Product
+
+Invoice
+
+InvoiceItem
+
+User (para login / JWT si aplica)
+
+Debe incluir
+
+Diseño del dominio completo (entidades, VO, agregados).
+
+Servicios de dominio y aplicación.
+
+Commands (CreateInvoice, UpdateCustomer, etc.)
+
+Queries (GetInvoiceById, ListProducts, etc.)
+
+Repositorios (in-memory primero, luego Prisma + PostgreSQL).
+
+Interfaz Next.js con componentes TSX.
+
+Formularios reales para crear facturas.
+
+Ejemplo de validaciones con Zod.
+
+Ejemplo de pruebas unitarias para el dominio.
+
+Arquitectura lista para producción.
+
+4. Estilo solicitado
+
+Explica cada paso de forma clara, didáctica y progresiva.
+
+Usa siempre código funcional en TypeScript y TSX.
+
+No omitas pasos; enséñame de forma secuencial.
+
+Cada vez que expliques algo, da un ejemplo práctico real.
+
+Finaliza el curso con el proyecto completo funcionando.
+
+5. Solicitud final
+
+Cuando termines cada capítulo pregúntame si quiero continuar con el siguiente, para avanzar paso a paso.
+
+==========================
+hazme un prompt refinado que me ayude a aprender Tailwind CSS 4 para usarlo con Next.JS 16 y arquitectura DDD, CQRS con ejemplos practicos
+y al final un proyecto de facturacion donde se aplique todo lo aprendido. utilizaremos tsx para la codificacion.
