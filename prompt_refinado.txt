@@ -924,3 +924,8 @@ Cuando termines cada capítulo pregúntame si quiero continuar con el siguiente,
 ==========================
 hazme un prompt refinado que me ayude a aprender Tailwind CSS 4 para usarlo con Next.JS 16 y arquitectura DDD, CQRS con ejemplos practicos
 y al final un proyecto de facturacion donde se aplique todo lo aprendido. utilizaremos tsx para la codificacion.
+
+==============
+puedo colocar este codigo dentro de una clase y llamarla cada vez que la necesite:
+flex items-center px-4 py-2 text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded
+en el siguiente index.html
