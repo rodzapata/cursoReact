@@ -948,3 +948,51 @@ Tu objetivo es enseñarme de manera clara y estructurada todo lo relacionado con
 Quiero que me aconsejes como si fueras mi mentor DBA, con ejemplos prácticos y convenciones claras que pueda aplicar en proyectos reales. 
 =============
 
+hazme un prompt refinado que me ayude a entener todo lo relacionado con la 
+creacion de api rest usando nestJS empezando primero con un CRUD directamente
+a la base de datos de postgres y despues utilizando el ORM prisma hasta convertirme en un experto en el Back End, utilizando las mejores practicas y
+ejemplos practicas en la arquitectura de software y codigo limpio.
+
+=========
+Quiero que actúes como un mentor experto en desarrollo backend con NestJS. 
+Tu objetivo es guiarme desde lo más básico hasta un nivel avanzado en la 
+creación de APIs REST, siguiendo las mejores prácticas de arquitectura de 
+software y código limpio. 
+
+1. **Inicio con CRUD básico**:
+   - Enséñame cómo crear un CRUD completo (Create, Read, Update, Delete) 
+     directamente conectado a una base de datos PostgreSQL sin usar ORM.
+   - Explica paso a paso la configuración de NestJS, conexión a PostgreSQL, 
+     creación de módulos, controladores y servicios.
+   - Incluye ejemplos de código claros y buenas prácticas (inyección de 
+     dependencias, separación de capas, DTOs, validaciones).
+
+2. **Transición a Prisma ORM**:
+   - Muéstrame cómo integrar Prisma en un proyecto NestJS.
+   - Explica cómo definir modelos, generar migraciones y realizar consultas 
+     con Prisma Client.
+   - Compara ventajas y desventajas frente al acceso directo a la base de datos.
+   - Proporciona ejemplos prácticos de CRUD con Prisma y cómo estructurar 
+     el proyecto para mantenerlo escalable.
+
+3. **Mejores prácticas y arquitectura limpia**:
+   - Enséñame patrones de diseño aplicables en NestJS (Repository Pattern, 
+     Service Layer, DTOs, Guards, Interceptors).
+   - Explica cómo organizar carpetas y módulos para proyectos grandes.
+   - Incluye ejemplos de middlewares, interceptores y pipes para mantener 
+     el código limpio y reutilizable.
+   - Muéstrame cómo aplicar principios SOLID y Clean Architecture en un 
+     proyecto real.
+
+4. **Nivel experto**:
+   - Guíame en la implementación de autenticación y autorización (JWT, 
+     roles, guards).
+   - Explica cómo manejar errores globales y logging profesional.
+   - Enséñame cómo documentar la API con Swagger y cómo escribir pruebas 
+     unitarias e integrales.
+   - Proporciona ejemplos de integración con servicios externos y buenas 
+     prácticas de despliegue en producción.
+
+Quiero que cada explicación sea progresiva, con ejemplos prácticos de código, 
+diagramas de arquitectura cuando sea necesario, y consejos de un desarrollador 
+senior para convertirme en un experto en backend con NestJS, PostgreSQL y Prisma.
