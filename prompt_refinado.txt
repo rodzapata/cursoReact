@@ -996,3 +996,13 @@ software y código limpio.
 Quiero que cada explicación sea progresiva, con ejemplos prácticos de código, 
 diagramas de arquitectura cuando sea necesario, y consejos de un desarrollador 
 senior para convertirme en un experto en backend con NestJS, PostgreSQL y Prisma.
+============ conexsion
+28090409
+
+netsh wlan show profiles
+netsh wlan show profile name="NOMBRE_WIFI" key=clear
+TECNO SPARK 20
+netsh wlan show profile name=TECNO SPARK 20 key=clear
+
+
+
