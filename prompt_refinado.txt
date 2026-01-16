@@ -1004,5 +1004,23 @@ netsh wlan show profile name="NOMBRE_WIFI" key=clear
 TECNO SPARK 20
 netsh wlan show profile name=TECNO SPARK 20 key=clear
 
+======
+prompt refinado para aprender patrones de diseño de lo mas basico a lo mas complejo utilizanando
+ejemplos practicos
+
+==========
+Quiero aprender patrones de diseño en programación desde lo más básico hasta lo más complejo. 
+Enséñame en un plan progresivo que incluya:
+
+1. Una explicación clara y sencilla de cada patrón.
+2. Ejemplos prácticos en código (preferiblemente en lenguaje Typescript, C#).
+3. Casos de uso reales donde se aplican esos patrones.
+4. Ejercicios o mini-proyectos para practicar cada patrón.
+5. Una progresión ordenada: primero patrones creacionales, luego estructurales, y finalmente de comportamiento.
+6. Comparaciones entre patrones similares para entender cuándo usar uno u otro.
+7. Buenas prácticas y errores comunes a evitar.
+======cita
+sabado 24 8:20 laboratorio 
+electro cardiograma : martes 11:40 amn 20 de enero + tamizaje de cancer
 
 
