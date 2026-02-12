@@ -1022,5 +1022,67 @@ Enséñame en un plan progresivo que incluya:
 ======cita
 sabado 24 8:20 laboratorio 
 electro cardiograma : martes 11:40 amn 20 de enero + tamizaje de cancer
+=============
 
+quiero crear un proyecto nuevo en nestJS version 11.0.16 voy usar ORM Prisma version 7.3.0 ,
+node version 24.11.0 y la base de datos de postgress version 16  ya existe y tiene informacion y no quiero
+que se borre
 
+==========
+o sentimos! Actualmente cuentas con el servicio suspendido tel 018000519519
+
+Estado de afiliacion
+NO HA INICIADO COBERTURA INTEGRAL
+
+cual es la diferencia entre ejecutar
+npm install prisma -D
+o 
+npm install prisma @prisma/client
+
+segun las mejores practicas recomendadas por nestJS version 11.0.16 y Prisma version 7.3.0
+el schema.prisma que me esta generando output, es mejor quitar 
+esta linea de codigo o se debe dejar, el codigo es:
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+el codigo de prisma.config.ts segun las mejores practicas recomendadas por nestJS version 11.0.16 y Prisma version 7.3.0
+es recomendada o no ?
+import "dotenv/config";
+import { defineConfig } from "prisma/config";
+
+export default defineConfig({
+  schema: "prisma/schema.prisma",
+  migrations: {
+    path: "prisma/migrations",
+  },
+  datasource: {
+    url: process.env["DATABASE_URL"],
+  },
+});
+
+==========
+en mi schema tengo el siguiente codigo:
+generator client {
+  provider = "prisma-client"
+  output          = "../src/generated/prisma"
+  moduleFormat    = "cjs"  
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model prov {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+
+pero no se refleja la tabla en postgress que comando debo utilizar estoy usando express 7
