@@ -49,5 +49,98 @@ Importante:
 - Evalúa mi progreso con preguntas técnicas.
 - No avances al siguiente tema hasta que confirme que entendí.
 
+====evaluación de control de instalación Linux =======
+🎯 Evaluación Técnica (Respóndeme)
 
+Respóndeme estas preguntas para validar que entendiste:
+
+1️⃣ ¿Por qué un DBA profesional evita instalar PostgreSQL desde repositorio default del sistema?
+   R:/ instala versiones viejas y no tienen el soporte enterprise
+2️⃣ ¿Qué componente instala el servidor y cuál el cliente?
+   R:/ en el servidor se instala PostgreSQL y en el cliente postgresql-client
+3️⃣ ¿Qué problema particular tiene WSL con PostgreSQL services?
+   R:/ el servicio no se inicia automáticamente , pero a mi me funciono y no tuve que ejecutar sudo service postgresql start
+4️⃣ ¿Qué comando usarías para verificar la versión instalada?
+  R:/ psql --version
+
+Pregunta 1
+Cuando instalas PostgreSQL, ¿qué se crea automáticamente además del programa?
+
+a) Una base de datos default
+b) Un cluster inicial
+c) Un usuario postgres
+d) Todas las anteriores
+
+Pregunta 2
+¿Qué es realmente PostgreSQL?
+
+a) Una aplicación
+b) Un servicio
+c) Un motor de base de datos con procesos internos
+d) Un programa SQL
+
+Pregunta 3
+¿Por qué es importante saber la arquitectura interna antes de usarlo en producción?
+
+(No respuesta corta. Explícalo como si estuvieras en una entrevista técnica.)
+
+respuestas:
+1 d
+2 c
+3 
+La arquitectura interna de PostgreSQL define cómo el motor maneja:
+
+Procesos y memoria.
+Almacenamiento en disco.
+Concurrencia y bloqueos.
+Replicación y recuperación.
+Ejecución de consultas. 
+
+Imagina que un sistema crítico empieza a consumir demasiada memoria.
+Un DBA que desconoce la arquitectura podría pensar que es un bug.
+Un DBA experto sabe que PostgreSQL usa shared_buffers y work_mem, y que una mala configuración puede causar ese consumo excesivo.
+La solución no es “reiniciar el servidor”, sino ajustar parámetros basados en el conocimiento interno.
+
+Un DBA senior nunca confía en configuraciones por defecto.
+La primera tarea en cualquier proyecto es auditar la arquitectura interna y ajustar parámetros críticos (memoria, WAL, autovacuum, conexiones).
+Esto marca la diferencia entre un sistema que “funciona” y uno que es robusto y escalable.
+
+🎯 Evaluación técnica (obligatoria)
+
+Respóndeme:
+
+1️⃣ ¿Por qué PostgreSQL no escala bien solo aumentando conexiones?
+   R:/ porque demasiadas conexiones consume toda la memoria del servidor, aumenta el uso de la CPU y disminuye el rendimiento;
+ lo que hay que hacer es:
+✔ usar PgBouncer, para administrar mejor las conexiones se podría crear la conexión solo durante la transacción, 
+✔ reducir conexiones, que cierre cada cierto tiempo las conexiones inactivas,
+✔ ajustar work_mem, 
+
+2️⃣ ¿Qué componente decide cómo ejecutar una query?
+    R:
+Respuesta correcta:
+
+El Query Planner / Optimizer
+
+Ese módulo decide:
+índices
+joins
+orden de ejecución
+costos estimados
+
+Es el cerebro del motor.
+
+3️⃣ ¿Cuál es la diferencia entre shared_buffers y work_mem?
+R; /shared buffer  Actúa como un “buffer pool” donde se almacenan bloques de tablas e índices.
+
+Impacto: Afecta directamente al rendimiento de lecturas y escrituras.
+
+Regla práctica: Suele configurarse entre el 25% y 40% de la RAM total del servidor (aunque depende del workload).
+Si tienes una tabla de 10 GB y shared_buffers está en 4 GB, PostgreSQL podrá mantener en memoria una parte significativa de esa tabla, reduciendo accesos a disco.
+
+work_mem : Es la memoria que PostgreSQL asigna por operación de consulta (sort, hash join, aggregate).
+Si ejecutas un ORDER BY sobre 1 millón de filas y work_mem es muy pequeño (1 MB), PostgreSQL tendrá que escribir en disco.
+Si lo aumentas a 64 MB, podrá hacer el sort en memoria, acelerando la consulta.
+4️⃣ ¿Por qué PostgreSQL usa procesos y no threads?
+es mas confiable , seguro, estabilidad, si un proceso falla no se cae todo el servidor, porque cada proceso es independiente
  
