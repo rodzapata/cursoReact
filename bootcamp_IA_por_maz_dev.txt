@@ -1,5 +1,6 @@
 https://bootcamp.manz.dev/
 
+https://www.youtube.com/playlist?list=PLx5xbrpW6nXgISwDvrMeKuryN9U1Giqzj
 https://www.youtube.com/watch?v=x28OvdVBegU
 
 hay que instalar WSL2
@@ -48,6 +49,33 @@ Importante:
 - Enséñame como si mi objetivo fuera trabajar profesionalmente como DBA PostgreSQL.
 - Evalúa mi progreso con preguntas técnicas.
 - No avances al siguiente tema hasta que confirme que entendí.
+
+==== gestor de contraseña recomendados ==========
+Bitwarden
+KeePassXC / keePassDX
+PearPass
+
+====pregunta a la IA ======
+quiero que me des tu opinion como un experto DBA y en infraestructura,
+tengo un proyecto de react, NestJs y NestJS que vengo trabajando en windows,
+acabo de instalar WSL, ya instale el git dentro de WSL, es recomendable
+clonar en respositorio dentro de WSL o copiar la carpeta del proyecto de windows dentro del WSL
+
+==== permisos para usuario ====
+apt update && apt install sudo curl git wget
+usermod -aG sudo rzapata
+exit
+
+#instalar fish que es una terminal personalizable
+sudo apt install curl fish
+
+#establece fish por defecto
+chsh -s $(which fish)
+
+
+
+
+
 
 
  
