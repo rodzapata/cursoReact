@@ -174,4 +174,73 @@ Si ejecutas un ORDER BY sobre 1 millón de filas y work_mem es muy pequeño (1 M
 Si lo aumentas a 64 MB, podrá hacer el sort en memoria, acelerando la consulta.
 4️⃣ ¿Por qué PostgreSQL usa procesos y no threads?
 es mas confiable , seguro, estabilidad, si un proceso falla no se cae todo el servidor, porque cada proceso es independiente
+
+cual es la diferencias entre estos dos comando:
+comando 1:
+       wget -qO - https://www.postgresql.org/media/keys/ACCC4CF8.asc \
+        | gpg --dearmor \
+        | sudo tee /usr/share/keyrings/postgresql.gpg > /dev/null 
+
+comando 2:
+        curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc \
+        | gpg --dearmor \
+        | sudo tee /usr/share/keyrings/postgresql.gpg > /dev/null
+
+
+hacen lo mismo pero la opcion 2 es la mas recomandada en la actualidad
+
+cual es la diferencia entre estos dos comandos:
+comando 1:
+
+ echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+
+comando 2:
+
+ echo "deb [signed-by=/usr/share/keyrings/postgresql.gpg] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" \
+        | sudo tee /etc/apt/sources.list.d/pgdg.list    
+
+hacen lo mismo pero la opcion 2 en la mas recomendada la primera que esta deprecada
+
+============
+Actúa como un DBA senior experto en PostgreSQL, redes y administración de sistemas Linux y Windows.
+Tengo PostgreSQL version 18 instalado en Linux y quiero configurarlo correctamente para poder conectarme desde Windows usando DBeaver.
+
+Necesito que me enseñes paso a paso y en orden lógico:
+
+Cómo verificar que PostgreSQL está funcionando en Linux.
+
+Cómo configurar PostgreSQL para aceptar conexiones remotas (postgresql.conf y pg_hba.conf).
+
+Cómo configurar el firewall de Linux si está activo.
+
+Cómo crear un usuario y base de datos de prueba con permisos correctos.
+
+Cómo obtener la IP del servidor Linux.
+
+Cómo probar conexión desde Windows (ping, telnet o similares).
+
+Cómo configurar la conexión en DBeaver correctamente.
+
+Solución de errores comunes y cómo diagnosticarlos.
+
+Explica cada paso con comandos, ejemplos reales y qué hace cada configuración.
+Si hay buenas prácticas de seguridad, inclúyelas.
+Asume que soy desarrollador pero quiero aprender administración como DBA profesional.
+
+======= carga masiva =======
+cree el usuario english_api pero cuando trato de realizar un carga masiva:
+me sale el siguiente error:
+SQL Error [42501]: ERROR: permission denied to COPY from a file
+  Detail: Only roles with privileges of the "pg_read_server_files" role may COPY from a file.
+  Hint: Anyone can COPY to stdout or from stdin. psql's \copy command also works for anyone.
+
+     COPY dictionary (word, pronunciation, period_type)
+        FROM 'C:/data/dictionary.csv'
+        WITH (
+            FORMAT csv,
+            HEADER true,
+            DELIMITER ';',
+            ENCODING 'UTF8'
+        );
+
  
