@@ -243,4 +243,7 @@ SQL Error [42501]: ERROR: permission denied to COPY from a file
             ENCODING 'UTF8'
         );
 
- 
+ ===================
+dame un promp refinado que me ayude a trabjar un agente o modelo para que me genere codigo de react 19,
+pero donde yo le espifico con archivos locales los ejemplos y estilos de programacoin que 
+debe utilizar, osea como seria ese proceso de entrenamiento
